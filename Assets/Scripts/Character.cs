@@ -14,6 +14,7 @@ public class Character
         Name = name;
         Affection = 0;
         character = csc;
+        character.SetPos(4);
     }
     public int GiveAffection(int affection)
     {
