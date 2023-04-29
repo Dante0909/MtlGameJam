@@ -41,7 +41,7 @@ public class InkExample : MonoBehaviour
         newTextObject.fontSize = 24;
 
         // Access the global variable and change its value
-        story.EvaluateFunction("changeName", "Alva");
+        //story.EvaluateFunction("changeName", "Alva");
 
         // Load the next block and save text (if any)
         string text = getNextStoryBlock();

@@ -1788,7 +1788,7 @@ namespace Ink.Runtime
         /// testing a story in playmode, when it's not possible to write a client-side C# external
         /// function, but you don't want it to fail to run.
         /// </summary>
-        public bool allowExternalFunctionFallbacks { get; set; }
+        public bool allowExternalFunctionFallbacks { get; set; } = true;
 
         public void CallExternalFunction(string funcName, int numberOfArguments)
         {
