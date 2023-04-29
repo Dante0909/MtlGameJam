@@ -22,6 +22,8 @@ public class TextDisplayer : MonoBehaviour
     private Coroutine m_textCoroutine;
     private List<GameObject> backgrounds;
     private GameObject currentBackground;
+    [SerializeField] private SpriteRenderer darkImage;
+    private CanvasGroup canvasGroup;
 
     [SerializeField] private List<CharacterSpriteController> characterPrefabs;
 
@@ -33,9 +35,10 @@ public class TextDisplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        joseph = new Character("Joseph", characterPrefabs[0]);
-        francois = new Character("François", characterPrefabs[1]);
-        pierreEsprit = new Character("Pierre-Esprit", characterPrefabs[2]);
+        canvasGroup = GetComponent<CanvasGroup>();
+        joseph = new Character("Joseph", Instantiate(characterPrefabs[0]));
+        francois = new Character("François", Instantiate(characterPrefabs[1]));
+        pierreEsprit = new Character("Pierre-Esprit", Instantiate(characterPrefabs[2]));
     }
 
     // Update is called once per frame
@@ -94,12 +97,13 @@ public class TextDisplayer : MonoBehaviour
         GameObject b = backgrounds.Find(x => x.name == name);
         if (b is not null)
         {
-            //Add fade in
-            if(b != currentBackground)
+            //this is so scuffed
+            if(b.name + "(Clone)" != currentBackground?.name)
             {
                 Destroy(currentBackground);
                 currentBackground = Instantiate(b);
             }
+            StartCoroutine(FadeOutAndIn());
         }
 
     }
@@ -184,7 +188,7 @@ public class TextDisplayer : MonoBehaviour
         isCoroutineRunning = true;
         for (int i = 0; i < text.Length; ++i)
         {
-            yield return new WaitForSecondsRealtime(m_timeDelay);
+            yield return new WaitForSeconds(m_timeDelay);
             
             if(text[i] == '<')
             {
@@ -247,5 +251,28 @@ public class TextDisplayer : MonoBehaviour
         else if (tag == "F" || tag == "François") c = francois;
         else if (tag == "P" || tag == "Pierre-Esprit") c = pierreEsprit;
         return c;
+    }
+
+    private IEnumerator FadeOutAndIn()
+    {
+        if (currentBackground)
+        {
+            SpriteRenderer spriteRenderer = currentBackground.GetComponent<SpriteRenderer>();
+            Color c = spriteRenderer.color;
+            float a = c.a;
+            while (spriteRenderer.color.a > 0.01f)
+            {
+                yield return new WaitForFixedUpdate();
+                a -= 0.02f;
+                spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
+            }
+            while (spriteRenderer.color.a < 0.99f)
+            {
+                yield return new WaitForFixedUpdate();
+                a += 0.02f;
+                spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
+            }
+
+        }
     }
 }

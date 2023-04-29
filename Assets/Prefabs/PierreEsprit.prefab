@@ -47,10 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
-  - {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
-  - {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
-  - {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
-  - {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
+  - {fileID: 21300000, guid: d95cde3d66c704b44a8a2eb21241dac2, type: 3}
+  - {fileID: 21300000, guid: be699707930eed44aa2b9db181f18b66, type: 3}
+  - {fileID: 21300000, guid: 29d68d60a03bbe248b6e87e916c05c70, type: 3}
+  - {fileID: 21300000, guid: bc7dd24d7b43571439d9cb4ab4f9e3d7, type: 3}
 --- !u!212 &7423798138767935360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bf132e70e58f63e4ca3a127d083cfde3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
