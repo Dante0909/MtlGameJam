@@ -726,7 +726,7 @@ Et je suis fière d'être ta femme. # Marie-Marie
 === fin_felicitation_J ===
 {ChangeBackground("black")}
 Félicitations !!! # null
-Vous avez trouvé la fin de Joseph. 
+Vous avez trouvé la fin de Joseph.
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
