@@ -76,8 +76,7 @@ Wow, tout le village est là! # Marie-Marie
  *  [C’est tout aussi beau que la musique qu’on entend en France.]
     {CCS("J",1)}
     Ça me fait plaisir de l’entendre, parce que ce n’est pas la dernière fois que j’en jouerai! # Joseph
-    Je l’espère! # Marie
-    {GivePoints("J",1)}
+    Je l’espère! # Marie-Marie
     ->after_second_choice
 *   [Je suis sûre que tu aimerais avoir un vrai instrument…]
     {CCS("J",4)}
@@ -209,14 +208,13 @@ Choisis bien. # Pierre-Esprit
 ->Choix
 
 === activite_joseph ===
-{ChangeBackground("foret")}
 {CCP("J",1)}
 Bonsoir Joseph, comment s'est passée ta journée ? # Marie-Marie
 Bonsoir Marie-Marie, elle a été difficile comme d'habitude, mais j'ai réussi à couper suffisamment de bois pour le prochain hiver. # Joseph
 C'est formidable. Je suis venu te voir parce que je voulais prendre une marche et j'ai pensé que tu pourrais m'accompagner. # Marie-Marie
 {CCS("J",3)}
 Bien sûr, je serais ravi de t'accompagner. Passons dans mon champ de blé d'Inde pour aller à la forêt. Allons-y! # Joseph
-{ChangeBackground("foret_deep")}
+{ChangeBackground("foret")}
 {CCP("J",1)}
 Ils partent prendre une marche dans la forêt # null 
 {CCS("J",1)}
@@ -241,7 +239,7 @@ Oh! # Marie-Marie
 … *Rougit*
 \*Pensant* Quand nos mains se sont touchées, j'ai ressenti un frisson. Je me demande s’il a ressenti la même chose.
 Oh! Pardon!... Je suis vraiment désolé… # Joseph
-Non non ! je t’assure c’est sans soucis! *Rougit* # Marie-Marie
+Non non ! Je t’assure c’est sans soucis! *Rougit* # Marie-Marie
 \*Continuent à marcher comme si rien ne s’était passé* # Joseph # Marie-Marie
 Tes mains sont bien abîmées, Joseph. C'est dur d'être fermier, n'est-ce pas ? # Marie-Marie
 {CCS("J",0)}
@@ -268,7 +266,6 @@ Oh! C’est vrai, je n’ai pas vu le temps passer #Joseph
 ->Choix
 
 === activite_francois ===
-{ChangeBackground("door")}
 \*Toque toque* # Marie-Marie
 …
 François? *Toque toque*
@@ -396,7 +393,7 @@ Ce n’est pas grave, ça arrive Pier- # Marie-Marie
 {CCS("P",4)}
 … # Pierre-Esprit
 {GivePoints("P",0)}->choice_Pierre_Esprit_activity_two
-*[Wow Pierre-Esprit je suis impressionnée!]
+*[Wow Pierre-Esprit, je suis impressionnée!]
  Je ne m’attendais pas à ce que tu te confies comme ça… Et que tu sois un si bon artisan. Ton secret est en sécurité avec moi. # Marie-Marie
  {CCS("P",2)}
 \*Rougit* # Pierre-Esprit

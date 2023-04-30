@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -5447193834354968503}
   - component: {fileID: 5514927004566457716}
   m_Layer: 0
-  m_Name: foret_deep
+  m_Name: foret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 603f610b8889b374f925cd0f76735cb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f23a1c73a94d6f4eb1e335ca737ee1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f20ea516506e6ec41b819ddd0369b497, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 66b6f1b7bac78e9478b355a8faf2783b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
