@@ -67,20 +67,20 @@ public class TextDisplayer : MonoBehaviour
         Action<string> ChangeBackgroundFunc = ChangeBackground;
         Action<string, int> ChangeCharacterPositionFunc = ChangeCharacterPosition;
         Action<string, int> ChangeCharacterSpriteFunc = ChangerCharacterSprite;
-        Action<string> ToggleCharacterOff = ToggleOff;
+        Action FrancoisFunc = FrancoisNameChange;
         
         m_story.BindExternalFunction("GivePoints", GivePointsFunc);
         m_story.BindExternalFunction("ChangeScene", ChangeSceneFunc);
         m_story.BindExternalFunction("ChangeBackground", ChangeBackgroundFunc);
         m_story.BindExternalFunction("CCP", ChangeCharacterPositionFunc);
         m_story.BindExternalFunction("CCS", ChangeCharacterSpriteFunc);
-        m_story.BindExternalFunction("ToggleCharOFf", ToggleCharacterOff);
+        m_story.BindExternalFunction("Francois", FrancoisFunc);
         TryRefresh();
     }
 
-    public void ToggleOff(string characterName = null)
+    public void FrancoisNameChange()
     {
-
+        francois.Name = "Françoise";
     }
     public void ChangerCharacterSprite(string characterName, int spriteIndex)
     {
@@ -97,8 +97,11 @@ public class TextDisplayer : MonoBehaviour
         GameObject b = backgrounds.Find(x => x.name == name);
         if (b is not null)
         {
+            ChangeCharacterPosition("J", 3);
+            ChangeCharacterPosition("P", 3);
+            ChangeCharacterPosition("F", 3);
             //this is so scuffed
-            if(b.name + "(Clone)" != currentBackground?.name)
+            if (b.name + "(Clone)" != currentBackground?.name)
             {
                 Destroy(currentBackground);
                 currentBackground = Instantiate(b);
@@ -241,14 +244,14 @@ public class TextDisplayer : MonoBehaviour
 
     private bool IsACharacterFromTag(string tag)
     {
-        return tag == "J" || tag == "Joseph" || tag == "F" || tag == "François" || tag == "P" || tag == "Pierre-Esprit";
+        return tag == "J" || tag == "Joseph" || tag == "F" || tag == "François" || tag =="Françoise" || tag == "P" || tag == "Pierre-Esprit";
     }
 
     private Character GetCharacterFromTag(string tag)
     {
         Character c = m_currentChar;
         if (tag == "J" || tag == "Joseph") c = joseph;
-        else if (tag == "F" || tag == "François") c = francois;
+        else if (tag == "F" || tag == "François" || tag == "Françoise") c = francois;
         else if (tag == "P" || tag == "Pierre-Esprit") c = pierreEsprit;
         return c;
     }
@@ -257,7 +260,7 @@ public class TextDisplayer : MonoBehaviour
     {
         if (currentBackground)
         {
-            SpriteRenderer spriteRenderer = currentBackground.GetComponent<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = currentBackground.GetComponentInChildren<SpriteRenderer>();
             Color c = spriteRenderer.color;
             float a = c.a;
             while (spriteRenderer.color.a > 0.01f)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character
 {
-    public string Name { get; private set; }
+    public string Name { get; set; }
     public int Affection { get; private set; }
 
     private CharacterSpriteController character;

@@ -17,3 +17,6 @@ MonoBehaviour:
   textAsset: {fileID: 4900000, guid: 48d93edd23d019546a0a8ee8c2d8f562, type: 3}
   backgrounds:
   - {fileID: 7672285850463315546, guid: 10992d926a5ad4b41be6e8f72f1377df, type: 3}
+  - {fileID: 3706762251011170428, guid: c68955ad7a66b6d4d9c03aea9937cf98, type: 3}
+  - {fileID: 6530760278920922143, guid: b4c304cd2d5f8cc43bea9a05676d2c56, type: 3}
+  - {fileID: 8372108798542687420, guid: e619a2902fc9b7e49a85ab45e08802ae, type: 3}
