@@ -9,6 +9,7 @@ VAR P_points = 0
 
 -> Tronc_commun
 === Tronc_commun ===
+{ResetPoints()}
 {ChangeBackground("boat")}
 \*Inspire* Ça y est… Après un long voyage de presque trois mois sur <i>L’Espérance</i>, me voilà enfin en Nouvelle-France. # Marie-Marie
 Ce fût dur. Plusieurs d’entre nous n’ont pas survécu.
@@ -498,6 +499,10 @@ Q-Quoi? Tu es...
     {character == "P": 
     ~ P_points += points
     }
+=== function ResetPoints() ===
+    ~ J_points = 0
+    ~ F_points = 0
+    ~ P_points = 0
 
  === function ChangeBackground(backgroundName) ===
     ~ return
