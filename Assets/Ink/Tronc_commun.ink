@@ -1,15 +1,16 @@
-EXTERNAL GivePoints(character, points)
 EXTERNAL ChangeBackground(backgroundName)
 EXTERNAL ChangeScene(sceneName)
 EXTERNAL CCS(characterName, spriteIndex)
 EXTERNAL CCP(characterName, pos)
+EXTERNAL Francois()
 VAR J_points = 0
 VAR F_points = 0
 VAR P_points = 0
 
 -> Tronc_commun
 === Tronc_commun ===
-{ChangeBackground("boat")}
+{ResetPoints()}
+{ChangeBackground("black")}
 \*Inspire* Ça y est… Après un long voyage de presque trois mois sur <i>L’Espérance</i>, me voilà enfin en Nouvelle-France. # Marie-Marie
 Ce fût dur. Plusieurs d’entre nous n’ont pas survécu.
 À vrai dire, je suis la dernière. Toutes les autres Filles du Roy ont péri durant la traversée de l’Atlantique. Quant à ce que ça veut dire pour moi… 
@@ -183,7 +184,7 @@ Choisis bien. # Pierre-Esprit
  -> Choix
  
 === Choix ===
-{ChangeBackground("bedroom")}
+{ChangeBackground("port")}
 {Choix == 1:
     Ma première journée complète à Trois-Pistoles… Je vais bientôt devoir choisir un mari, je dois donc apprendre à connaître les candidats. Aujourd’hui, je vais passer du temps avec… # Marie-Marie
 }
@@ -225,9 +226,10 @@ Ah! Voilà! C'est ici que je fais pousser du blé d'Inde. # Joseph
 C'est vraiment impressionnant. J'adore la nature, mais je n'ai pas beaucoup d'expérience en agriculture.# Marie-Marie
 {CCS("J",0)}
 Ce n'est pas grave. Il y a beaucoup à apprendre, mais c'est une vie simple et satisfaisante. # Joseph
-* [Ça doit être agréable comme vie. J'aime le calme de la campagne, loin des maisons et des ports.]
+* [Ça doit être agréable comme vie.]
+    J'aime le calme de la campagne, loin des maisons et des ports. # Marie-Marie
 {GivePoints("J",1)}->choice_Joseph_activity_one
-*[Tu dois t'ennuyer sans voisins, loin des autres pistolois et des activités.]
+*[Tu dois t'ennuyer sans voisins.]
     {CCS("J",4)}
     En fait, j’aime le calme de la campagne, loin du bruit et du chaos des ports. # Joseph
 {GivePoints("J",0)}->choice_Joseph_activity_one
@@ -271,7 +273,7 @@ Oh! C’est vrai, je n’ai pas vu le temps passer #Joseph
 François? *Toque toque*
 {CCP("F",1)}
 Oh, Marie-Marie! Pardon de t’avoir fait attendre, j’étais absorbé par mon travail. Entre, je vais te servir du thé pour te réchauffer. # François
-Merci, c’est très apprécié! Je viens tout juste d’arriver, ne t’inquiète pas.# Marie-Marie
+Merci, c’est très apprécié! Je viens tout juste d’arriver, ne t’inquiète pas. # Marie-Marie
 {ChangeBackground("bureau")}
 {CCP("F",1)}
 Je suis soulagé de l’entendre. Je suis désolé de ne pas pouvoir te proposer une activité plus intéressante, mais je ne peux pas me permettre de quitter mon bureau. # François
@@ -403,7 +405,7 @@ Il commence à faire tard, je dois rentrer. Merci pour la journée ! # Marie-Mar
 ->Choix
 
 === apres_activites ===
-{ChangeBackground("village")}
+{ChangeBackground("port")}
 J'ai pu passer du temps avec les trois hommes... Mais je ne suis toujours pas  certaine qui choisir comme époux. Je me demande avec qui je vais passer du temps aujourd'hui. # Marie-Marie
 Marie-Marie! Je vous cherchais justement. # Jean-Baptiste Colbert
 Sir Colbert! N'êtes-vous pas reparti en France? # Marie-Marie
@@ -411,14 +413,14 @@ Non, je repars plus tard aujourd'hui. C'est pourquoi je voulais avoir votre rép
 J-je dois choisir maintenant? Mais enfin, j'ai à peine eu le temps de les connaître! # Marie-Marie
 Soyez heureuse d'avoir la liberté de choisir. Je réunirai le village dans une heure, assurez-vous d'avoir pris votre décision d'ici là. # Jean-Baptiste Colbert
 Je n'y crois pas... Je dois choisir d'ici UNE HEURE!? # Marie-Marie
-{ChangeBackground("village")}
+{ChangeBackground("port")}
 <i>Une heure plus tard...</i> # null
 Pistolois, votre accueil fût chaleureux et je vous en remercie. Je repars pour la France sous peu, cependant je dois m'assurer que votre Fille du Roy s'est bien mariée. C'est pourquoi notre chère Marie-Marie vous annoncera désormais l'identité de son futur époux. # Jean-Baptiste Colbert
 B-Bonjour. Mon futur époux sera... # Marie-Marie
 
 *   [Joseph]
     {CCP("J",1)}
-    {J_points > 4:
+    {J_points > 3:
         {CCS("J",1)}
         Je n'y crois pas! J'accepte avec plaisir! # Joseph
         ->joseph_route
@@ -429,7 +431,7 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
     }
 *   [François]
     {CCP("F",1)}
-    {F_points > 4:
+    {F_points > 3:
         {CCS("F",2)}
         Je suis ravi de l'apprendre. # François
         ->francois_route
@@ -440,7 +442,7 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
     }
 *   [Pierre-Esprit]
     {CCP("P",1)}
-    {P_points > 4:
+    {P_points > 3:
         {CCS("P",2)}
         Héhé, évidemment, c'est le meilleur choix! # Pierre-Esprit
         ->pierre_esprit_route
@@ -452,14 +454,103 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
 
 === bad_end ===
 {ChangeBackground("black")}
+{F_points}
 Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi… vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
 ->END
 
 === joseph_route ===
+{ChangeBackground("black")}
+<i>Quelques mois plus tard...</i> # null
+{ChangeBackground("cabin")}
+{CCP("J",1)}
+Chérie... L'hiver approche. Je vais devoir partir au camp pour l'hiver. # Joseph
+Joseph, non! Que vais-je faire ici toute seule tout l'hiver? Amène-moi avec toi! # Marie-Marie
+{CCS("J",4)}
+Enfin, ma douce, tu sais bien que c'est un travail d'homme de bûcher! # Joseph
+Mais vous devez bien manger, n'est-ce pas? Je cuisinerai! # Marie-Marie
+{CCS("J",2)}
+Marie-Marie... Je ne pensais pas que tu t'ennuierais autant de moi. # Joseph
+{CCS("J",1)}
+Ça me ferait plaisir que tu m'accompagnes dans ce cas.
+Oh, merci, Joseph! # Marie-Marie
+{ChangeBackground("cuisine")}
+<i> Au camp de bûcherons, pendant l'hiver... </i> # null
+{CCP("J",1)}
+{CCS("J",5)}
+Tout le monde, je vous présente Marie-Marie qui cuisinera pour nous cet hiver... C'est ma femme. # Joseph
+Wow, le petit Joseph s'est trouvé une femme! J'en tombe de ma chaise! # Bûcheron
+S'il-vous-plait, vous me gênez... # Joseph
+J'aurais jamais cru voir ça arriver! Si il a réussit, je peux pas croire que je m'en trouverai pas une aussi! # Bûcheron
+{CCS("J",2)}
+Joseph est un homme impressionnant et sensible! # Marie-Marie
+C'est moi qui ait choisi de l'épouser, et je n'ai jamais regretté mon choix!
+Peut-être que si vous étiez un peu plus agréables, vous seriez déjà mariés!
+{CCS("J",5)}
+Marie-Marie, tu n'as pas à en faire tout un plat... # Joseph
+Je ne les laisserai pas se moquer de toi ainsi! # Marie-Marie
+C'est décidé, si j'entend quiconque se moquer de mon mari, il n'aura rien à manger ce jour-là!
+... # Bûcherons
+Elle a des crocs, cette femme... # Bûcheron
+Marie-Marie, revient! # Joseph
+{ChangeBackground("bedroom")}
+\*Sanglote* # Marie-Marie
+J'aurais dû rester à Trois-Pistoles...
+{CCP("J",1)}
+{CCS("J",4)}
+Marie-Marie... # Joseph
+Ne t'en fais pas... Il sont toujours comme ça, il ne sont pas méchants.
+Mais pourquoi tu te laisses faire? # Marie-Marie
+{CCS("J",0)}
+Ce qu'ils disent ne me blesse pas. # Joseph
+Pourquoi?? # Marie-Marie
+Ils peuvent penser ce qu'ils veulent, mais ça n'a pas d'importance. # Joseph
+{CCS("J",3)}
+Au final, ce qui compte, c'est d'avoir bûché.
+Mais ils disent des choses si méchantes envers toi! # Marie-Marie
+{CCS("J",0)}
+Ça ne me dérange pas. Ces hommes, ce ne sont pas mes amis. Je ne les vois que quelques mois pendant l'hiver, et on fait notre travail, rien de plus.
+{CCS("J",1)}
+Et comment je peux me laisser affecter par ce qu'ils disent quand je sais que tu es à mes côtés et que tu m'aimes?
+Joseph! Mon amour! # Marie-Marie
+{CCS("J",3)}
+L'hiver sera long, ma douce, mais ensemble, je suis sûr qu'on s'en sortira. # Joseph
+{ChangeBackground("cuisine")}
+<i> À l'arrivée du printemps... </i> # null
+Théodore! Ce n'est pas parce que c'est la dernière journée que tu passes au campement que tu peux te permettre de laisser traîner ta vaisselle! Ramasse-la tout de suite! # Marie-Marie
+O-oui, Marie-Marie, pardon... # Théodore
+Et Elzéar! Plie ta couette avant de partir! # Marie-Marie
+Tout de suite, Marie-Marie... # Elzéar
+{CCP("J",1)}
+{CCS("J",2)}
+Bon sang, Marie-Marie, tu tiens complètement leurs rênes! # Joseph
+{CCS("J",1)}
+C'est ma femme, tout le monde, n'oubliez pas!
+{CCS("J",3)}
+Mwah! Tu es parfaite.
+{CCS("J",2)}
+Ne pense pas que tu peux te sauver de tes tâches juste parce que tu es mon mari! Range tes affaires! # Marie-Marie
+Évidemment, j'étais justement sur le point de le faire... # Joseph
+Bien sûr, mon doux. # Marie-Marie
+{CCS("J",0)}
+Comment as-tu trouvé ton hiver au camp? Ça n'a pas été de tout repos, mais je trouve que tu t'en es bien sortie! # Joseph
+Tu as bien raison. Et tu sais quoi? # Marie-Marie
+Je pense que je reviendrai l'an prochain.
+{CCS("J",1)}
+Rien ne me rendrait plus heureux! # Joseph
+{CCS("J",0)}
+Mais tu sais... Je pense que cette année, je terminerai de défricher notre terre. Je pourrais trouver de quoi acheter du bétail...
+{CCS("J",3)}
+Nous n'aurons peut-être pas à revenir.
+Joseph, c'est incroyable! Tu pourras enfin enterrer ta hache! # Marie-Marie
+{CCS("J",0)}
+J'y compte. Toi, moi, notre ferme à nous deux... Ce serait la belle vie, n'est-ce pas? # Joseph
+{CCS("J",1)}
+Ce sera la fin de Joseph le bûcheron, et le début de Joseph le fermier.
 ->END
+
 === francois_route ===
 {ChangeBackground("black")}
-<i>Quelques mois plus tard...</i>
+<i>Quelques mois plus tard...</i> # null
 {ChangeBackground("bureau")}
 {CCP("F",1)}
 Oh, tu as fait une erreur ici, c'est 6, pas 4. # Marie-Marie
@@ -484,10 +575,59 @@ Et bien en fait, ce n'est pas tout à fait la vérité. # François
 J'ai bien hérité la compagnie après le décès de son dirigeant précédent. Cependant, ce n'était pas mon frère.
 {CCS("F",3)}
 C'était mon époux.
-Q-Quoi? Tu es...
+Q-Quoi? Tu es... homosexuel?? # Marie-Marie
+{CCS("F",2)}
+C'est plus compliqué que cela. Je t'aime tout autant que j'ai aimé cet homme. # François
+{CCS("F",3)}
+Cependant... Ce n'est pas toute l'histoire.
+Il y a plus!? #Marie-Marie
+Oui... Car la situation qui m'a amené à marier cet homme est bien similaire à celle qui t'a amené à m'épouser. # François
+{CCS("F",2)}
+J'ai été, moi aussi, une Fille du Roy, auparavant.
+Je... suis une femme.
+Quoi?? Mais... Comment? Pourquoi?? Je suis si confuse! # Marie-Marie
+{CCS("F",0)}
+Je comprends, c'est beaucoup à avaler. # François
+J'ai immigré il y a 8 ans, en tant que Fille du Roy, tout comme toi. J'ai marié un riche marchand à qui je faisais de l'oeil.
+{CCS("F",1)}
+Il m'a appris son métier, et je l'aidais dans ses tâches quotidiennes. J'étais tout aussi responsable de la compagnie que lui. Jusqu'à...
+{CCS("F",3)}
+...ce qu'il tombe malade.
+Ce fût si rapide. En seulement quelques semaines, je suis passée d'épouse d'un marchand fructueux à veuve.
+{CCS("F",0)}
+Je refusais de perdre la compagnie et le mode de vie qui vient avec... mais une femme n'a pas le droit à l'héritage, et nous n'avions pas de descendant.
+J'ai donc prétendu être le frère cadet de mon époux afin d'en hériter. C'est l'identité que j'ai adopté ce jour là, et que j'utilise depuis.
+... # Marie-Marie
+{CCS("F",3)}
+Je suis désolée... Je comprendrais si tu ne m'aimes plus, et je prendrai tout de même soin de toi. # François
+... # Marie-Marie
+...Quel est ton vrai nom?
+{Francois()}
+...Françoise. Je ne voulais pas trop... me distancer. # Françoise
+...Françoise... # Marie-Marie
+... Je suis sous le choc, et j'ai tant de questions.
+Cependant, une chose reste claire pour moi.
+{CCS("F",2)}
+Je t'aime, Françoise.
+Marie-Marie... # Françoise
+{CCS("F",4)}
+Merci, sincèrement. J'admire ta résilience.
+Allez, il nous reste beaucoup de travail à faire.
+{ChangeBackground("bureau")}
+{CCP("F",1)}
+{CCS("F",4)}
+Une autre belle journée de travail.
+Si jamais je tombe malade, tu pourrais me remplacer sans problème.
+Ne fais pas de telles blagues! # Marie-Marie
+Pardon, pardon, je ne le referai plus. Je ne vis plus dans l'ombre de mon mari maintenant. Je vis pour toi. # Françoise
+Oh, ma douce! # Marie-Marie
+Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus rien à te cacher désormais. # Françoise
+
 ->END
+
 === pierre_esprit_route ===
 ->END
+
 === function GivePoints(character, points) ===
     {character == "J":
     ~ J_points += points
@@ -498,6 +638,10 @@ Q-Quoi? Tu es...
     {character == "P": 
     ~ P_points += points
     }
+=== function ResetPoints() ===
+    ~ J_points = 0
+    ~ F_points = 0
+    ~ P_points = 0
 
  === function ChangeBackground(backgroundName) ===
     ~ return
@@ -509,4 +653,7 @@ Q-Quoi? Tu es...
     ~ return
     
  === function CCP(characterName, pos) ===
+    ~ return
+    
+=== function Francois() ===
     ~ return
