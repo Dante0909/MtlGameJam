@@ -461,7 +461,7 @@ Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est p
 === joseph_route ===
 {ChangeBackground("black")}
 <i>Quelques mois plus tard...</i> # null
-{ChangeBackground("foret")}
+{ChangeBackground("cabin")}
 {CCP("J",1)}
 Chérie... L'hiver approche. Je vais devoir partir au camp pour l'hiver. # Joseph
 Joseph, non! Que vais-je faire ici toute seule tout l'hiver? Amène-moi avec toi! # Marie-Marie
