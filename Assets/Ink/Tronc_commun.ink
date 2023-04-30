@@ -29,7 +29,7 @@ Cependant, la mer a été rude, et le scorbut a frappé fort. Seule émergente d
  Bienvenue, Marie-Marie. Je regrette d’apprendre que la traversée fût si difficile. Je m’appelle François, je suis marchand. Ma famille possède une compagnie de traite, que je dirige depuis la mort de mon frère aîné. J’attendais avec impatience L’Espérance afin d’envoyer des fourrures en France. # François
 {CCP("P",2)}
 {CCS("J",1)}
- Pierre-Esprit, coureur des bois. C’est terrible, autant de Filles du Roy perdues ainsi... # Pierre-Esprit
+ Pierre-Esprit, coureur des bois. C’est terrible, une telle perte... # Pierre-Esprit
 *   [Enchantée, Joseph! Je vous remercie pour l’accueil chaleureux.]
     {GivePoints("J",1)} ->after_first_choice
 *   [J’apprécie le sentiment, François.]
