@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 341195065}
   - component: {fileID: 341195064}
   - component: {fileID: 341195063}
+  - component: {fileID: 341195069}
+  - component: {fileID: 341195070}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -160,6 +162,7 @@ MonoBehaviour:
   m_characterTextBox: {fileID: 1549515674}
   button: {fileID: 2122502060077994197, guid: 5e5888f64d850034a81feb7f3adf6562, type: 3}
   m_timeDelay: 0.05
+  darkImage: {fileID: 0}
   characterPrefabs:
   - {fileID: -6486393556269726343, guid: 6925a4c18dc94364eb7c399423cf6b02, type: 3}
   - {fileID: -6486393556269726343, guid: 384d8e10d0f082540aabe106c27b9c3e, type: 3}
@@ -247,6 +250,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!222 &341195069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341195062}
+  m_CullTransparentMesh: 1
+--- !u!225 &341195070
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341195062}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &411008848
 GameObject:
   m_ObjectHideFlags: 0
