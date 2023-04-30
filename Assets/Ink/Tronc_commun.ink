@@ -633,6 +633,58 @@ Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus r
 ->END
 
 === pierre_esprit_route ===
+{ChangeBackground("black")}
+<i>Quelques mois plus tard...</i> # null
+{ChangeBackground("maison_vetement")}
+La La La~ # Marie-Marie
+Voilà, cet arrangement est parfait! Ça fait vraiment ressortir les couleurs des vêtements.
+Slam! # null
+{CCP("P",1)}
+Marie-Marie, je suis rentré. # Pierre-Esprit
+Pierre-Esprit, te voilà enfin! Tu arrives tard. Tu n'étais pas en train de boire tout de même? # Marie-Marie
+{CCS("P",4)}
+Mais non, mais non... # Pierre-Esprit
+Où étais-tu, alors? # Marie-Marie
+...Je me lavais dans la rivière. # Pierre-Esprit
+{CCS("P",2)}
+Oh, je vois! Je suis fière de toi. # Marie-Marie
+{CCS("P",4)}
+Je ne suis pas un si mauvais mari, tout de même. # Pierre-Esprit
+Oh! Regarde ce que j'ai fait! J'ai arrangé tous tes vêtements sur les étagères pour les mettre en valeur! # Marie-Marie
+{CCS("P",2)}
+...! # Pierre-Esprit
+Tu es content? # Marie-Marie
+Marie-Marie... # Pierre-Esprit
+{CCS("P",3)}
+Tu penses encore à me faire ouvrir ce magasin?
+...! Mais Pierre-Esprit! Tu sais que c'est ce qui te rendrait heureux! # Marie-Marie
+Marie-Marie. Je ne peux pas. # Pierre-Esprit
+{CCS("P",4)}
+Je suis un coureur des bois, pas un couturier.
+C'est faux! Tous ces vêtements faits de ta main sont d'excellente qualité! Ce sont les plus beaux vêtements que j'ai vu depuis mon arrivée en Nouvelle-France. # Marie-Marie
+S'il-te-plaît, essaie, au moins. Tu n'as rien à perdre, non?
+Je ne peux pas arrêter de travailler pour un tel risque... # Pierre-Esprit
+Je peux m'occuper de la boutique pendant le jour! Et quand elle aura du succès, tu pourras arrêter de courir les bois pour de bon. # Marie-Marie
+... D'accord. C'est bien pour toi que j'accepte. # Pierre-Esprit
+{CCS("P",2)}
+Merci, mon chou! Tu ne le regretteras pas! # Marie-Marie
+{ChangeBackground("maison_vetement")}
+<i>Une semaine plus tard...</i> # null
+Voilà, cela fera 10 sols! # Marie-Marie
+Tiens, Marie-Marie. # Pistolois
+Haaa, on a déjà vendu presque la moitié des vêtements. Il faudrait que Pierre-Esprit en couse d'autres. # Marie-Marie
+Slam! # null
+{CCP("P",1)}
+Marie-Marie, je suis rentré. # Pierre-Esprit
+Oh, Pierre-Esprit, combien de fois je t'ai dit d'arrêter de claquer la porte en rentrant? # Marie-Marie
+{CCS("P",4)}
+P-pardon... # Pierre-Esprit
+Tu sais, tes vêtements ont beaucoup de succès! # Marie-Marie
+Ils ne peuvent pas être si populaires... Ils n'ont rien de spécial... # Pierre-Esprit
+J'en ai déjà vendu presque la moitié! # Marie-Marie
+{CCS("P",2)}
+La-la moitié?!? <i> Mes vêtements # Pierre Esprit
+
 
 ->fin_felicitation_P
 ->END
