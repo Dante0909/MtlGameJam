@@ -499,7 +499,7 @@ J'aurais dû rester à Trois-Pistoles...
 {CCP("J",1)}
 {CCS("J",4)}
 Marie-Marie... # Joseph
-Ne t'en fais pas... Ils sont toujours comme ça, il ne sont pas méchants.
+Ne t'en fais pas... Ils sont toujours comme ça, ils ne sont pas méchants.
 Mais pourquoi tu te laisses faire? # Marie-Marie
 {CCS("J",0)}
 Ce qu'ils disent ne me blesse pas. # Joseph
