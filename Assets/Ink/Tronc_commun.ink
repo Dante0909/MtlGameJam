@@ -77,6 +77,7 @@ Wow, tout le village est là! # Marie-Marie
     {CCS("J",1)}
     Ça me fait plaisir de l’entendre, parce que ce n’est pas la dernière fois que j’en jouerai! # Joseph
     Je l’espère! # Marie
+    {GivePoints("J",1)}
     ->after_second_choice
 *   [Je suis sûre que tu aimerais avoir un vrai instrument…]
     {CCS("J",4)}
