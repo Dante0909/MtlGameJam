@@ -44,7 +44,7 @@ public class TextDisplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
         {
             if(m_story != null)
             {
@@ -149,9 +149,9 @@ public class TextDisplayer : MonoBehaviour
 
             for(int i = 0; i < m_currentTags.Count; ++i)
             {
-                speakingCharacter = "";
                 if(i == 0)
                 {
+                    speakingCharacter = "";
                     string t = m_currentTags[i];
 
                     if (t == "null")
@@ -263,15 +263,15 @@ public class TextDisplayer : MonoBehaviour
             float a = c.a;
             while (spriteRenderer && spriteRenderer.color.a > 0.01f)
             {
-                yield return new WaitForFixedUpdate();
                 a -= 0.02f;
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
+                yield return new WaitForFixedUpdate();
             }
             while (spriteRenderer && spriteRenderer.color.a < 0.99f)
-            {
-                yield return new WaitForFixedUpdate();
+            {                
                 a += 0.02f;
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
+                yield return new WaitForFixedUpdate();
             }
 
         }
