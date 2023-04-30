@@ -12,4 +12,7 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit game");
     }
+    public void ReturnMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
 }
