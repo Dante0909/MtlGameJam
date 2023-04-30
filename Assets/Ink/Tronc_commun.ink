@@ -64,7 +64,7 @@ Wow, tout le village est là! # Marie-Marie
  Marie-Marie! Marie-Marie! Viens danser avec nous! # Pistolois
  Très bien, j’arrive! # Marie-Marie
  {ChangeBackground("town_hall")}
- \*Plus tard* # null
+ <i>Plus tard...</i> # null
 {CCP("J",1)}
  Ah, je suis épuisée! Après un tel voyage, je n’ai pas la force de danser autant. # Marie-Marie
  {CCS("J",1)}
@@ -86,7 +86,7 @@ Wow, tout le village est là! # Marie-Marie
     Je comprends, tu as raison. # Marie-Marie
     ->after_second_choice
 = after_second_choice
-Je vais retourner faire un tour, à plus tard, Joseph! # Marie-Marie
+Je vais retourner faire un tour. À plus tard, Joseph! # Marie-Marie
 {ChangeBackground("town_hall")}
 Aye! # Marie-Marie
 {CCP("P",1)}
@@ -236,12 +236,12 @@ Ce n'est pas grave. Il y a beaucoup à apprendre, mais c'est une vie simple et s
 {GivePoints("J",0)}->choice_Joseph_activity_one
 =choice_Joseph_activity_one
 {CCS("J",2)}
-<i>Leurs mains se touchent par accident</i> # null
+<i>Leurs mains se touchent par accident.</i> # null
 Oh! # Marie-Marie
 ... *Rougit*
-\*Pensant* Quand nos mains se sont touchées, j'ai ressenti un frisson... Je me demande s’il a ressenti la même chose.
+<i>(Quand nos mains se sont touchées, j'ai ressenti un frisson... Je me demande s’il a ressenti la même chose.)</i>
 Oh, pardon!... Je suis vraiment désolé... # Joseph
-Non non ! Je t’assure c’est sans soucis! *Rougit* # Marie-Marie
+Non non! Je t’assure, c’est sans soucis! *Rougit* # Marie-Marie
 \*Continuent à marcher comme si rien ne s’était passé* # Joseph # Marie-Marie
 Tes mains sont bien abîmées, Joseph. C'est dur d'être fermier, n'est-ce pas ? # Marie-Marie
 {CCS("J",0)}
@@ -264,7 +264,7 @@ Oh! C’est vrai, je n’ai pas vu le temps passer. #Joseph
 \*se prennent la main en silence* #Joseph # Marie-Marie
 ... # Joseph
 \*Continuent à marcher en silence* # Joseph # Marie-Marie
-\*Pensant* Je suis triste que notre promenade soit terminée. J'ai apprécié chaque moment passé avec Joseph. # Marie-Marie
+<i>(Je suis triste que notre promenade soit terminée. J'ai apprécié chaque moment passé avec Joseph.)</i> # Marie-Marie
 ->Choix
 
 === activite_francois ===
@@ -295,7 +295,7 @@ Merci, je travaille fort pour maintenir la compagnie. C’est ma plus grande fie
 {CCS("F",0)}
 Le thé est prêt, voilà ta tasse. # François
 Merci! # Marie-Marie
-Il est délicieux!
+! Il est délicieux!
 Je suis ravi de l’entendre. J’espère que tu ne regrettes pas trop le voyage? # François
 Je suis bien heureuse qu’il soit enfin terminé, mais je n’ai pas laissé grand-chose en France. Ma famille était pauvre et mon père n’a pas hésité à prendre la dot pour m’envoyer ici.# Marie-Marie
 {CCS("F",1)}
@@ -338,7 +338,7 @@ Je vais te montrer comment faire! Tu n’auras qu'à faire comme moi, Marie-Mari
 \*Essoufflée* Attends, Pierre-Esprit, je ne peux pas suivre ton- ton rythme. # Marie-Marie
 \*Chuchote agressivement* On ne peut pas ralentir maintenant! on va manquer notre chance. # Pierre-Esprit
 *[*Chuchote* D’accord, je ferai de mon mieux.]
-\*Hochement de tête* Parfait! Continuons # Pierre-Esprit
+\*Hochement de tête* Parfait! Continuons. # Pierre-Esprit
 {GivePoints("P",1)}->choice_Pierre_Esprit_activity_one
 *[J’ai dit de m'attendre, Pierre-Esprit!]
 {CCS("P",3)}
