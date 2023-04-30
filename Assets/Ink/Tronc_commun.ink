@@ -246,11 +246,11 @@ Non non ! je t’assure c’est sans soucis! *Rougit* # Marie-Marie
 Tes mains sont bien abîmées, Joseph. C'est dur d'être fermier, n'est-ce pas ? # Marie-Marie
 {CCS("J",0)}
 Oui, ça peut être difficile. Mais j'aime le travail manuel et la nature. # Joseph
-*[Oh, tu aimes sûrement te retrouver dans la forêt pour bûcher du bois!]
+*[Oh, tu aimes sûrement te retrouver dans la forêt pour bûcher!]
 {CCS("J",4)}
 Ça m’attriste de devoir couper des arbres l’hiver, mais c’est le seul métier que je peux faire quand il fait froid… # Joseph
 {GivePoints("J",0)}->choice_Joseph_activity_two
-*[Oh, ça doit être difficile, mais gratifiant de cultiver la terre et de voir les récoltes grandir.]
+*[Oh, ça doit être difficile, mais gratifiant de cultiver la terre.]
 {CCS("J",1)}
 Oui, voir mes plantes grandir est l’une des choses que j’apprécie le plus. # Joseph
 {GivePoints("J",1)}->choice_Joseph_activity_two
