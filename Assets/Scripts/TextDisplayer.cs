@@ -20,7 +20,9 @@ public class TextDisplayer : MonoBehaviour
     private string m_currentText;
     private List<string> m_currentTags = null;
     private bool isCoroutineRunning = false;
+    private bool isFadeCoroutineRunning = false;
     private Coroutine m_textCoroutine;
+    private Coroutine m_fadeCoroutine;
     private List<GameObject> backgrounds;
     private GameObject currentBackground;
     [SerializeField] private SpriteRenderer darkImage;
@@ -111,7 +113,11 @@ public class TextDisplayer : MonoBehaviour
                 Destroy(currentBackground);
                 currentBackground = Instantiate(b);
             }
-            StartCoroutine(FadeOutAndIn());
+            if (isFadeCoroutineRunning)
+            {
+                StopCoroutine(m_fadeCoroutine);
+            }
+            m_fadeCoroutine = StartCoroutine(FadeOutAndIn());
         }
 
     }
@@ -263,6 +269,7 @@ public class TextDisplayer : MonoBehaviour
 
     private IEnumerator FadeOutAndIn()
     {
+        isFadeCoroutineRunning = true;
         if (currentBackground)
         {
             SpriteRenderer spriteRenderer = currentBackground.GetComponentInChildren<SpriteRenderer>();
@@ -280,7 +287,7 @@ public class TextDisplayer : MonoBehaviour
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
                 yield return new WaitForFixedUpdate();
             }
-
         }
+        isFadeCoroutineRunning = false;
     }
 }
