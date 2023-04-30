@@ -455,8 +455,7 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
 {ChangeBackground("black")}
 Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi... vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
 
-Vous avez trouvé la fin malheureuse. # null
-Avez-vous trouvé les quatre fins possibles?
+Est-il possible pour Marie-Marie d'être plus heureuse?
 {MainMenu()}
 
 ->END
@@ -549,6 +548,9 @@ Joseph, c'est incroyable! Tu pourras enfin enterrer ta hache! # Marie-Marie
 J'y compte. Toi, moi, notre ferme à nous deux... Ce serait la belle vie, n'est-ce pas? # Joseph
 {CCS("J",1)}
 Ce sera la fin de Joseph le bûcheron, et le début de Joseph le fermier.
+{ChangeBackground("joseph_cg")}
+... # cg
+
 ->fin_felicitation_J
 ->END
 
@@ -626,6 +628,8 @@ Ne fais pas de telles blagues! # Marie-Marie
 Pardon, pardon, je ne le referai plus. Je ne vis plus dans l'ombre de mon mari maintenant. Je vis pour toi. # Françoise
 Oh, ma douce! # Marie-Marie
 Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus rien à te cacher désormais. # Françoise
+{ChangeBackground("francois_cg")}
+... # cg
 ->fin_felicitation_F
 
 ->END
@@ -718,29 +722,21 @@ J'ai toujours cru en toi Pierre-Esprit. Dès notre première rencontre, j'ai vu 
 Marie-Marie, je suis fier d'être ton mari. # Pierre-Esprit
 {CCS("P",1)}
 Et je suis fière d'être ta femme. # Marie-Marie
+{ChangeBackground("pierre-esprit_cg")}
+... # cg
+
 ->fin_felicitation_P
 ->END
 
 === fin_felicitation_J ===
-{ChangeBackground("black")}
-Félicitations! # null
-Vous avez trouvé la fin de Joseph. 
-Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
 
 === fin_felicitation_F ===
-{ChangeBackground("black")}
-Félicitations! # null
-Vous avez trouvé la fin de François. 
-Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
 
 === fin_felicitation_P ===
-{ChangeBackground("black")}
-Félicitations! # null
-Vous avez trouvé la fin de Pierre-Esprit. Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
 
