@@ -170,6 +170,7 @@ public class TextDisplayer : MonoBehaviour
                     if (t == "null")
                     {
                         m_currentChar = null;
+                        m_characterTextBox.transform.parent.gameObject.SetActive(false);
                         break;
                     }
                     else if (IsACharacterFromTag(t))
@@ -181,6 +182,7 @@ public class TextDisplayer : MonoBehaviour
                     {
                         speakingCharacter += t;
                     }
+                    m_characterTextBox.transform.parent.gameObject.SetActive(true);
                 }
                 else
                 {
