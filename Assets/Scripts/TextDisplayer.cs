@@ -5,6 +5,7 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class TextDisplayer : MonoBehaviour
 {
@@ -67,15 +68,21 @@ public class TextDisplayer : MonoBehaviour
         Action<string, int> ChangeCharacterPositionFunc = ChangeCharacterPosition;
         Action<string, int> ChangeCharacterSpriteFunc = ChangerCharacterSprite;
         Action FrancoisFunc = FrancoisNameChange;
+        Action MainMenuFunc = MainMenu;
         
         m_story.BindExternalFunction("ChangeScene", ChangeSceneFunc);
         m_story.BindExternalFunction("ChangeBackground", ChangeBackgroundFunc);
         m_story.BindExternalFunction("CCP", ChangeCharacterPositionFunc);
         m_story.BindExternalFunction("CCS", ChangeCharacterSpriteFunc);
         m_story.BindExternalFunction("Francois", FrancoisFunc);
+        m_story.BindExternalFunction("MainMenu", MainMenuFunc);
         TryRefresh();
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void FrancoisNameChange()
     {
         francois.Name = "Françoise";
@@ -215,7 +222,7 @@ public class TextDisplayer : MonoBehaviour
             choiceButton.transform.SetParent(canvasGameObject.transform, false);
 
             // Gets the text from the button prefab
-            Text choiceText = choiceButton.GetComponentInChildren<Text>();
+            TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
             choiceText.text = choice.text;
 
             // Set listener
