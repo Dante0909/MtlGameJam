@@ -77,6 +77,7 @@ Wow, tout le village est là! # Marie-Marie
     {CCS("J",1)}
     Ça me fait plaisir de l’entendre, parce que ce n’est pas la dernière fois que j’en jouerai! # Joseph
     Je l’espère! # Marie-Marie
+    {GivePoints("J",1)}
     ->after_second_choice
 *   [Je suis sûre que tu aimerais avoir un vrai instrument…]
     {CCS("J",4)}
@@ -244,11 +245,11 @@ Non non ! Je t’assure c’est sans soucis! *Rougit* # Marie-Marie
 Tes mains sont bien abîmées, Joseph. C'est dur d'être fermier, n'est-ce pas ? # Marie-Marie
 {CCS("J",0)}
 Oui, ça peut être difficile. Mais j'aime le travail manuel et la nature. # Joseph
-*[Oh, tu aimes sûrement te retrouver dans la forêt pour bûcher du bois!]
+*[Oh, tu aimes sûrement te retrouver dans la forêt pour bûcher!]
 {CCS("J",4)}
 Ça m’attriste de devoir couper des arbres l’hiver, mais c’est le seul métier que je peux faire quand il fait froid… # Joseph
 {GivePoints("J",0)}->choice_Joseph_activity_two
-*[Oh, ça doit être difficile, mais gratifiant de cultiver la terre et de voir les récoltes grandir.]
+*[Oh, ça doit être difficile, mais gratifiant de cultiver la terre.]
 {CCS("J",1)}
 Oui, voir mes plantes grandir est l’une des choses que j’apprécie le plus. # Joseph
 {GivePoints("J",1)}->choice_Joseph_activity_two
@@ -496,7 +497,7 @@ J'aurais dû rester à Trois-Pistoles...
 {CCP("J",1)}
 {CCS("J",4)}
 Marie-Marie... # Joseph
-Ne t'en fais pas... Il sont toujours comme ça, il ne sont pas méchants.
+Ne t'en fais pas... Ils sont toujours comme ça, ils ne sont pas méchants.
 Mais pourquoi tu te laisses faire? # Marie-Marie
 {CCS("J",0)}
 Ce qu'ils disent ne me blesse pas. # Joseph
