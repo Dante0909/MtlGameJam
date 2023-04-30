@@ -472,7 +472,7 @@ Marie-Marie... Je ne pensais pas que tu t'ennuierais autant de moi. # Joseph
 {CCS("J",1)}
 Ça me ferait plaisir que tu m'accompagnes dans ce cas.
 Oh, merci, Joseph! # Marie-Marie
-{ChangeBackground("cuisine")}
+{ChangeBackground("cabin")}
 <i> Au camp de bûcherons, pendant l'hiver... </i> # null
 {CCP("J",1)}
 {CCS("J",5)}
@@ -513,7 +513,7 @@ Et comment je peux me laisser affecter par ce qu'ils disent quand je sais que tu
 Joseph! Mon amour! # Marie-Marie
 {CCS("J",3)}
 L'hiver sera long, ma douce, mais ensemble, je suis sûr qu'on s'en sortira. # Joseph
-{ChangeBackground("cuisine")}
+{ChangeBackground("cabin")}
 <i> À l'arrivée du printemps... </i> # null
 Théodore! Ce n'est pas parce que c'est la dernière journée que tu passes au campement que tu peux te permettre de laisser traîner ta vaisselle! Ramasse-la tout de suite! # Marie-Marie
 O-oui, Marie-Marie, pardon... # Théodore
