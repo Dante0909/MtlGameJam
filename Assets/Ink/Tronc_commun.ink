@@ -454,7 +454,6 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
 
 === bad_end ===
 {ChangeBackground("black")}
-{F_points}
 Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi… vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
 
 Vous avez trouvé la fin malheureuse. # null
@@ -683,15 +682,50 @@ Tu sais, tes vêtements ont beaucoup de succès! # Marie-Marie
 Ils ne peuvent pas être si populaires... Ils n'ont rien de spécial... # Pierre-Esprit
 J'en ai déjà vendu presque la moitié! # Marie-Marie
 {CCS("P",2)}
-La-la moitié?!? <i> Mes vêtements # Pierre Esprit
-
-
+La-la moitié?!? <i> Mes vêtements ont vraiment du potentiel...?</i> # Pierre Esprit
+Alors? Tu veux bien garder la boutique? Il faudrait que tu fasses de nouveaux habits. # Marie-Marie
+Tu crois vraiment que je peux? Devenir couturier? # Pierre-Esprit
+Mais bien sûr! Regarde comment les étagères se sont vidées dans les derniers jours! # Marie-Marie
+Je... Je vais essayer, alors. # Pierre-Esprit
+! #Marie-Marie
+{CCS("P",1)}
+Merci, Marie-Marie. De croire en moi. # Pierre-Esprit
+{ChangeBackground("black")}
+<i>L'année suivante...</i> # null
+{ChangeBackground("maison_vetement")}
+{CCP("P",1)}
+{CCS("P",1)}
+{CCP("F",2)}
+Tiens, François. Cette veste coûterait 15 sols, mais pour toi ça sera 12. # Pierre-Esprit
+J'apprécie, mais tu mérites amplement toute la somme. # François
+Merci, François. J'aurai bientôt terminé ton chapeau, tu pourras repasser dans quelques jours. # Pierre-Esprit
+{CCS("F",1)}
+J'ai bien hâte de le voir. # François
+{CCP("F",4)}
+{CCS("P",0)}
+Pierre-Esprit! Peux-tu venir me donner un coup de main avec ce tissu? # Marie-Marie
+Tout de suite, mon amour! # Pierre-Esprit
+{ChangeBackground("maison_vetement")}
+{CCP("P",1)}
+Voilà! Tu devrais aussi le plier ici pour cacher la couture. # Pierre-Esprit
+Oh merci, Pierre-Esprit! Tu as tellement de talent! # Marie-Marie
+{CCS("P",2)}
+Tu me flattes, Marie-Marie... # Pierre-Esprit
+Mais c'est vrai! Tout le village le pense. Tout le monde s'habille de tes vêtements maintenant. Même François, qui porte toujours des vêtements de haute couture! # Marie-Marie
+{CCS("P",1)}
+Tout cela, c'est grâce à toi, Marie-Marie. Je n'aurais jamais osé suivre ma passion si tu ne m'avais pas encouragé. # Pierre-Esprit
+Je n'ai pas toujours été le meilleur mari, mais tu m'as changé pour le mieux. Je n'ai plus honte d'être authentique, maintenant.
+J'ai toujours cru en toi Pierre-Esprit. Dès notre première rencontre, j'ai vu le potentiel caché en toi. Je suis heureuse que tu sois enfin épanoui. # Marie-Marie
+{CCS("P",0)}
+Marie-Marie, je suis fier d'être ton mari. # Pierre-Esprit
+{CCS("P",1)}
+Et je suis fière d'être ta femme. # Marie-Marie
 ->fin_felicitation_P
 ->END
 
 === fin_felicitation_J ===
 {ChangeBackground("black")}
-Félicitation !!! # null
+Félicitations !!! # null
 Vous avez trouvé la fin de Joseph. 
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
@@ -699,7 +733,7 @@ Avez-vous trouvé les quatre fins possibles?
 
 === fin_felicitation_F ===
 {ChangeBackground("black")}
-Félicitation !!! # null
+Félicitations !!! # null
 Vous avez trouvé la fin de François. 
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
@@ -707,7 +741,7 @@ Avez-vous trouvé les quatre fins possibles?
 
 === fin_felicitation_P ===
 {ChangeBackground("black")}
-Félicitation !!! # null
+Félicitations !!! # null
 Vous avez trouvé la fin de Pierre-Esprit. 
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
