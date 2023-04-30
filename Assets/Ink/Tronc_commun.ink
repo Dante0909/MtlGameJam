@@ -722,7 +722,7 @@ J'ai toujours cru en toi Pierre-Esprit. Dès notre première rencontre, j'ai vu 
 Marie-Marie, je suis fier d'être ton mari. # Pierre-Esprit
 {CCS("P",1)}
 Et je suis fière d'être ta femme. # Marie-Marie
-{ChangeBackground("pierre-esprit_cg")}
+{ChangeBackground("pierre_esprit_cg")}
 ... # cg
 
 ->fin_felicitation_P
