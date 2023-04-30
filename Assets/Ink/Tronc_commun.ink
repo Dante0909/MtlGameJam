@@ -10,7 +10,7 @@ VAR P_points = 0
 -> Tronc_commun
 === Tronc_commun ===
 {ResetPoints()}
-{ChangeBackground("black")}
+{ChangeBackground("boat")}
 \*Inspire* Ça y est… Après un long voyage de presque trois mois sur <i>L’Espérance</i>, me voilà enfin en Nouvelle-France. # Marie-Marie
 Ce fût dur. Plusieurs d’entre nous n’ont pas survécu.
 À vrai dire, je suis la dernière. Toutes les autres Filles du Roy ont péri durant la traversée de l’Atlantique. Quant à ce que ça veut dire pour moi… 
