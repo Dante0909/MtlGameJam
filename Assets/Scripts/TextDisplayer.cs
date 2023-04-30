@@ -270,13 +270,13 @@ public class TextDisplayer : MonoBehaviour
             float a = c.a;
             while (spriteRenderer && spriteRenderer.color.a > 0.01f)
             {
-                a -= 0.02f;
+                a -= 0.04f;
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
                 yield return new WaitForFixedUpdate();
             }
             while (spriteRenderer && spriteRenderer.color.a < 0.99f)
             {                
-                a += 0.02f;
+                a += 0.04f;
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
                 yield return new WaitForFixedUpdate();
             }
