@@ -12,9 +12,9 @@ VAR P_points = 0
 === Tronc_commun ===
 {ResetPoints()}
 {ChangeBackground("boat")}
-\*Inspire* Ça y est… Après un long voyage de presque trois mois sur <i>L’Espérance</i>, me voilà enfin en Nouvelle-France. # Marie-Marie
+\*Inspire* Ça y est... Après un long voyage de presque trois mois sur <i>L’Espérance</i>, me voilà enfin en Nouvelle-France. # Marie-Marie
 Ce fût dur. Plusieurs d’entre nous n’ont pas survécu.
-À vrai dire, je suis la dernière. Toutes les autres Filles du Roy ont péri durant la traversée de l’Atlantique. Quant à ce que ça veut dire pour moi… 
+À vrai dire, je suis la dernière. Toutes les autres Filles du Roy ont péri durant la traversée de l’Atlantique. Quant à ce que ça veut dire pour moi...
 Nous approchons de la terre, douce Marie-Marie. Faites-vous belle pour nos fiers colons. # Jean-Baptiste Colbert
 {ChangeBackground("port")}
 <i>L’Espérance</i> a touché terre!! Les Filles du Roy arrivent! Dieu merci! # Pistolois
@@ -29,12 +29,12 @@ Cependant, la mer a été rude, et le scorbut a frappé fort. Seule émergente d
  Bienvenue, Marie-Marie. Je regrette d’apprendre que la traversée fût si difficile. Je m’appelle François, je suis marchand. Ma famille possède une compagnie de traite, que je dirige depuis la mort de mon frère aîné. J’attendais avec impatience L’Espérance afin d’envoyer des fourrures en France. # François
 {CCP("P",2)}
 {CCS("J",1)}
- Pierre-Esprit, coureur des bois. C’est terrible, autant de Filles du Roy perdues ainsi… # Pierre-Esprit
+ Pierre-Esprit, coureur des bois. C’est terrible, autant de Filles du Roy perdues ainsi... # Pierre-Esprit
 *   [Enchantée, Joseph! Je vous remercie pour l’accueil chaleureux.]
     {GivePoints("J",1)} ->after_first_choice
 *   [J’apprécie le sentiment, François.]
     {GivePoints("F",1)} ->after_first_choice
-*   [Si seulement vous saviez, Pierre-Esprit…]
+*   [Si seulement vous saviez, Pierre-Esprit...]
     {GivePoints("P",1)} ->after_first_choice
 = after_first_choice
 {CCS("J",0)}
@@ -45,11 +45,11 @@ M-moi? # Marie-Marie
 {CCS("J",1)}
 Ça alors, c’est du jamais vu! # Joseph
 {CCS("F",1)}
-Héhé… Intéressant! # François
+Héhé... Intéressant! # François
 {CCS("P",3)}
 Mais enfin, ça n’a pas de sens! # Pierre-Esprit
 Et qui êtes-vous pour contredire l’autorité du Roy? # François
-Grrrrrr… # Pierre-Esprit
+Grrrrrr... # Pierre-Esprit
 {CCS("J",3)}
 Enfin, tous, elle vient à peine d’arriver, attendez un peu avant de vous disputer! Nous tenons une fête ce soir à la maison du village pour célébrer, tu nous rejoindras, j’espère? # Joseph
 Avec Plaisir! #Marie-Marie
@@ -80,7 +80,7 @@ Wow, tout le village est là! # Marie-Marie
     Je l’espère! # Marie-Marie
     {GivePoints("J",1)}
     ->after_second_choice
-*   [Je suis sûre que tu aimerais avoir un vrai instrument…]
+*   [Je suis sûre que tu aimerais avoir un vrai instrument...]
     {CCS("J",4)}
     Pas du tout, j’adore jouer de la cuillère, c’est simple et complexe à la fois. Je ne sais pas jouer d’un autre instrument de toute façon! # Joseph
     Je comprends, tu as raison. # Marie-Marie
@@ -98,7 +98,7 @@ J’ai bien vu ça. Après cette longue journée, tu n’as plus d’énergie? #
 J’avoue que je suis plutôt épuisée, mais je ne peux pas quitter cette fête tenue pour moi. # Marie-Marie
 {CCS("P",4)}
 Oh, tu sais, on en organise assez souvent. # Pierre-Esprit
-Oh, je vois… # Marie-Marie
+Oh, je vois... # Marie-Marie
 {CCS("P",0)}
 Mais j’avoue que c’est rarement aussi vivant. Veux-tu de l’eau-de-vie? # Pierre-Esprit
 *   [Je peux bien goûter un petit peu.]
@@ -124,7 +124,7 @@ C’est un livre très rare. Je l’ai fait venir de France, et il s’agit d’
     {CCS("F",3)}
     Oh, ce n’est rien de spécial pour quelqu’un de mon milieu. Il y a peu de livres en Nouvelle-France, mais c’est un passe-temps assez commun chez les gens plus nantis. # François
     Tout de même! Il ne doit pas y avoir beaucoup de lecteurs à Trois-Pistoles. # Marie-Marie
-    En effet, c’est un petit village. J’aimais beaucoup discuter de littérature avec… mon frère… avant son décès. # François
+    En effet, c’est un petit village. J’aimais beaucoup discuter de littérature avec... mon frère... avant son décès. # François
     Je vois. # Marie-Marie
     ->after_fourth_choice
 *   [Ça a l’air très intéressant, j’aimerais pouvoir lire aussi.]
@@ -132,7 +132,7 @@ C’est un livre très rare. Je l’ai fait venir de France, et il s’agit d’
     Je pourrais t’apprendre, si tu veux. Je suis un homme occupé, mais c'est avec plaisir que je t'introduirais au monde de la littérature. Apprendre à lire prend du temps, mais ça en vaut la peine, je te le garantis. # François
     J’adorerais. Ça doit être difficile d’être une des seules personnes à savoir lire dans tout le village. # Marie-Marie
     {CCS("F",0)}
-    …Ça l’est, parfois. C’est mon frère qui m’a appris, et c’est lui qui m’a fait découvrir la magie de la lecture. Il me manque terriblement. # François
+    ...Ça l’est, parfois. C’est mon frère qui m’a appris, et c’est lui qui m’a fait découvrir la magie de la lecture. Il me manque terriblement. # François
     Je suis désolée, ça doit être difficile de perdre quelqu’un de si cher. # Marie-Marie
     {CCS("F",2)}
     J’apprécie le sentiment. # François
@@ -147,7 +147,7 @@ Hourra!! # Pistolois
 Et toi, Marie-Marie? Avec qui danseras-tu? # Joseph
 {CCP("F",0)}
 {CCS("F",1)}
-Je me demande… # François
+Je me demande... # François
 {CCP("P",2)}
 Choisis bien. # Pierre-Esprit
 *   [J’adorerais danser avec toi, Joseph.]
@@ -188,13 +188,13 @@ Choisis bien. # Pierre-Esprit
 === Choix ===
 {ChangeBackground("port")}
 {Choix == 1:
-    Ma première journée complète à Trois-Pistoles… Je vais bientôt devoir choisir un mari, je dois donc apprendre à connaître les candidats. Aujourd’hui, je vais passer du temps avec… # Marie-Marie
+    Ma première journée complète à Trois-Pistoles... Je vais bientôt devoir choisir un mari, je dois donc apprendre à connaître les candidats. Aujourd’hui, je vais passer du temps avec... # Marie-Marie
 }
 {Choix == 2:
-    Un nouveau jour se lève. Aujourd’hui, je vais aller voir… # Marie-Marie
+    Un nouveau jour se lève. Aujourd’hui, je vais aller voir... # Marie-Marie
 }
 {Choix == 3:
-    Il ne me reste qu’un candidat à rencontrer. Je vais retrouver… # Marie-Marie
+    Il ne me reste qu’un candidat à rencontrer. Je vais retrouver... # Marie-Marie
 }
 {Choix > 3:
     ->apres_activites
@@ -212,43 +212,43 @@ Choisis bien. # Pierre-Esprit
 === activite_joseph ===
 {CCP("J",1)}
 Bonsoir Joseph, comment s'est passée ta journée ? # Marie-Marie
-Bonsoir Marie-Marie, elle a été difficile comme d'habitude, mais j'ai réussi à couper suffisamment de bois pour le prochain hiver. # Joseph
+Bonsoir Marie-Marie. Elle a été difficile comme d'habitude, mais j'ai réussi à couper suffisamment de bois pour le prochain hiver. # Joseph
 C'est formidable. Je suis venu te voir parce que je voulais prendre une marche et j'ai pensé que tu pourrais m'accompagner. # Marie-Marie
 {CCS("J",3)}
-Bien sûr, je serais ravi de t'accompagner. Passons dans mon champ de blé d'Inde pour aller à la forêt. Allons-y! # Joseph
+Bien sûr, je serais ravi de t'accompagner. Passons par mon champ de blé d'Inde pour aller à la forêt. # Joseph
 {ChangeBackground("foret")}
 {CCP("J",1)}
-Ils partent prendre une marche dans la forêt # null 
 {CCS("J",1)}
 Tu sais, Marie-Marie, nous nous connaissons depuis peu, mais je t’apprécie et aime passer du temps avec toi. Tu es une personne formidable. # Joseph
-Merci, Joseph, toi aussi tu es un ami précieux. J'apprécie beaucoup ta présence à mes côtés. # Marie-Marie
+Merci, Joseph, toi aussi tu es un homme incroyable. J'apprécie beaucoup ta présence à mes côtés. # Marie-Marie
 {CCS("J",3)}
 Ah! Voilà! C'est ici que je fais pousser du blé d'Inde. # Joseph
-C'est vraiment impressionnant. J'adore la nature, mais je n'ai pas beaucoup d'expérience en agriculture.# Marie-Marie
+C'est vraiment impressionnant. J'adore la nature, mais je n'ai aucune expérience en agriculture.# Marie-Marie
 {CCS("J",0)}
 Ce n'est pas grave. Il y a beaucoup à apprendre, mais c'est une vie simple et satisfaisante. # Joseph
 * [Ça doit être agréable comme vie.]
-    J'aime le calme de la campagne, loin des maisons et des ports. # Marie-Marie
+    {CCS("J",3)}
+    Ça oui. J'aime le calme de la campagne, loin des maisons et du port. # Joseph
 {GivePoints("J",1)}->choice_Joseph_activity_one
 *[Tu dois t'ennuyer sans voisins.]
     {CCS("J",4)}
-    En fait, j’aime le calme de la campagne, loin du bruit et du chaos des ports. # Joseph
+    En fait, j’aime le calme de la campagne, loin du bruit et du chaos du port. # Joseph
 {GivePoints("J",0)}->choice_Joseph_activity_one
 =choice_Joseph_activity_one
 {CCS("J",2)}
 <i>Leurs mains se touchent par accident</i> # null
 Oh! # Marie-Marie
-… *Rougit*
-\*Pensant* Quand nos mains se sont touchées, j'ai ressenti un frisson. Je me demande s’il a ressenti la même chose.
-Oh! Pardon!... Je suis vraiment désolé… # Joseph
+... *Rougit*
+\*Pensant* Quand nos mains se sont touchées, j'ai ressenti un frisson... Je me demande s’il a ressenti la même chose.
+Oh, pardon!... Je suis vraiment désolé... # Joseph
 Non non ! Je t’assure c’est sans soucis! *Rougit* # Marie-Marie
 \*Continuent à marcher comme si rien ne s’était passé* # Joseph # Marie-Marie
 Tes mains sont bien abîmées, Joseph. C'est dur d'être fermier, n'est-ce pas ? # Marie-Marie
 {CCS("J",0)}
 Oui, ça peut être difficile. Mais j'aime le travail manuel et la nature. # Joseph
-*[Oh, tu aimes sûrement te retrouver dans la forêt pour bûcher!]
+*[Tu dois aimer te retrouver dans la forêt pour bûcher.]
 {CCS("J",4)}
-Ça m’attriste de devoir couper des arbres l’hiver, mais c’est le seul métier que je peux faire quand il fait froid… # Joseph
+Ça m’attriste de devoir couper des arbres l’hiver, mais c’est le seul métier que je peux faire quand il fait froid... # Joseph
 {GivePoints("J",0)}->choice_Joseph_activity_two
 *[Oh, ça doit être difficile, mais gratifiant de cultiver la terre.]
 {CCS("J",1)}
@@ -256,20 +256,20 @@ Oui, voir mes plantes grandir est l’une des choses que j’apprécie le plus. 
 {GivePoints("J",1)}->choice_Joseph_activity_two
 =choice_Joseph_activity_two
 <i>Une froide brise se fait ressentir alors que le soleil commence à descendre.</i> # null 
-On devrait peut-être retourner au village, il commence à faire tard. # Marie-Marie
+On devrait peut-être retourner au village, il commence à se faire tard. # Marie-Marie
 {CCS("J",2)}
-Oh! C’est vrai, je n’ai pas vu le temps passer #Joseph
+Oh! C’est vrai, je n’ai pas vu le temps passer. #Joseph
 \*Commencent à marcher en silence* # Joseph #Marie-Marie
-\*Rougit* #Marie-Marie
+... #Marie-Marie
 \*se prennent la main en silence* #Joseph # Marie-Marie
-\*Rougit* # Joseph
+... # Joseph
 \*Continuent à marcher en silence* # Joseph # Marie-Marie
 \*Pensant* Je suis triste que notre promenade soit terminée. J'ai apprécié chaque moment passé avec Joseph. # Marie-Marie
 ->Choix
 
 === activite_francois ===
 \*Toque toque* # Marie-Marie
-…
+...
 François? *Toque toque*
 {CCP("F",1)}
 Oh, Marie-Marie! Pardon de t’avoir fait attendre, j’étais absorbé par mon travail. Entre, je vais te servir du thé pour te réchauffer. # François
@@ -289,7 +289,7 @@ Tant de choses. D’abord, je dois m’assurer que les coureurs des bois fassent
 *[C’est impressionnant tout ce que tu arrives à faire.]
 {CCS("F",1)}
 Merci, je travaille fort pour maintenir la compagnie. C’est ma plus grande fierté. J’espère un jour avoir un descendant à qui je pourrai la léguer. # François
-\*Rougit* … # Marie-Marie
+\*Rougit* ... # Marie-Marie
 {GivePoints("F",1)}->choice_Francois_activity_one
 =choice_Francois_activity_one
 {CCS("F",0)}
@@ -310,8 +310,8 @@ Oh, merci François! Je suis touchée. Je l’espère aussi. # Marie-Marie
 *[*Retirer sa main*]
 {CCS("F",3)}
 Pardonne-moi, c’était impoli, je n’aurais pas dû. # François
-Ce n’est pas cela, j’ai juste été surprise… # Marie-Marie
-Non, je comprends. Arriver dans un nouveau village et être entourée d’inconnus qui cherchent à s’attirer tes faveurs… Ça ne peut pas être facile. # François
+Ce n’est pas cela, j’ai juste été surprise... # Marie-Marie
+Non, je comprends. Arriver dans un nouveau village et être entourée d’inconnus qui cherchent à s’attirer tes faveurs... Ça ne peut pas être facile. # François
 {GivePoints("F",0)}->choice_Francois_activity_two
 =choice_Francois_activity_two
 {CCS("F",0)}
@@ -334,74 +334,73 @@ Bonne fin de journée, Marie-Marie. # François
 Bonjour, Pierre-Esprit! J’ai bien hâte de- # Marie-Marie
 Prête pour notre partie de chasse? # Pierre-Esprit
 Oui! Justem- # Marie-Marie
-Je vais te montrer comment faire ! Tu n’auras qu'à faire comme moi Marie-Marie. Aller, aucun temps à perdre, j’ai terminé de me préparer. Allons-y! # Pierre-Esprit
-\*Essoufflé* Attends, Pierre-Esprit, je ne peux pas suivre ton- ton rythme. # Marie-Marie
-\*Chuchote agressivement* On ne peut pas ralentir maintenant! on va manquer notre chance.
-*[*Chuchote essoufflé* D’accord je ferai de mon mieux.]
+Je vais te montrer comment faire! Tu n’auras qu'à faire comme moi, Marie-Marie. Allez, aucun temps à perdre, j’ai terminé de me préparer. Allons-y! # Pierre-Esprit
+\*Essoufflée* Attends, Pierre-Esprit, je ne peux pas suivre ton- ton rythme. # Marie-Marie
+\*Chuchote agressivement* On ne peut pas ralentir maintenant! on va manquer notre chance. # Pierre-Esprit
+*[*Chuchote* D’accord, je ferai de mon mieux.]
 \*Hochement de tête* Parfait! Continuons # Pierre-Esprit
 {GivePoints("P",1)}->choice_Pierre_Esprit_activity_one
-*[J’ai dit de m'attendre Pierre-Esprit!]
+*[J’ai dit de m'attendre, Pierre-Esprit!]
 {CCS("P",3)}
 Tu devrais faire un peu d'exercice avant de venir chasser, Marie-Marie *Soupir* Je ne peux pas ralentir pour toi. # Pierre-Esprit
-\*Essoufflé* D’accord je ferai de mon mieux… # Marie-Marie
+\*Essoufflée* D’accord, je ferai de mon mieux... # Marie-Marie
 {GivePoints("P",0)}->choice_Pierre_Esprit_activity_one
 =choice_Pierre_Esprit_activity_one
 {CCS("P",0)}
-Allons par là! Je connais une cache parfaite pour deux. # Pierre-Esprit
-Nous y voilà. Installons dans ce creux derrière ces buissons. Nous serons à l'abri et bien camouflés ici.
-On ne rentrera jamais les deux dans cette cachette !? # Marie-Marie
-Que oui nous rentrons ! # Pierre-Esprit
-Euh… d’accord… # Marie-Marie
-\*Chuchote* Voilà, maintenant on regarde par là, il y a un appât prêt des trois épinettes. # Pierre-Esprit
-\*Regarde attentivement en silence en direction des épinettes* # Pierre-Esprit # Marie-Marie
+Allons par là! Je connais une cachette parfaite pour deux. # Pierre-Esprit
+Nous y voilà. Installons-nous dans ce creux derrière ces buissons. Nous serons à l'abri et bien camouflés ici.
+Mais... On ne rentrera jamais tous les deux dans cette cachette!? # Marie-Marie
+Que oui nous rentrons! # Pierre-Esprit
+Euh... d’accord... # Marie-Marie
+\*Chuchote* Voilà. Maintenant, regarde par là. Il y a un appât près des trois épinettes. # Pierre-Esprit
+\*Regardent attentivement en silence en direction des épinettes* # Pierre-Esprit # Marie-Marie
 {CCP("P",5)}
-Les heures passèrent, sans un mot, et ils n'avaient toujours rien attrapé. Pierre-Esprit commença à s'impatienter et à perdre son calme. #null 
-\*Pensant* Le vent fait bruire les feuilles et les oiseaux chantent. Je me sens en paix, comme si la nature elle-même me rassurait. Ou bien, c’est peut-être la présence de Pierre-Esprit? # Marie-Marie
-\*Rougit* Mais non voyons. J'aime simplement être ici, en harmonie avec la nature de la Nouvelle-Fran-
+<i>Quelques heures de silence plus tard...</i> #null 
+<i>(Le vent fait bruire les feuilles et les oiseaux chantent. Je me sens en paix, comme si la nature elle-même me rassurait. À moins que ce soit la présence de Pierre-Esprit?)</i> # Marie-Marie
+\*Rougit* <i>(Mais non voyons. J'aime simplement être ici, en harmonie avec la nature de la Nouvelle-Fran-)</i>
 {CCP("P",1)}
-Ah! Regarde, il y a un cerf là- bas… # Pierre-Esprit
+Ah! Regarde, il y a un cerf là-bas... # Pierre-Esprit
 {CCS("P",3)}
-Merde, on n’a pas l’angle pour tirer. Je dois aller derrière ce sapin rapidement !
+Merde, on n’a pas l’angle pour tirer. Je dois aller derrière ce sapin rapidement!
 {CCP("P",5)}
-\*Slam!* #null 
-Oh mon dieu Pierre-Esprit ! Est-ce que ça va?# Marie-Marie
+\*Splat!* #null 
+Oh mon dieu, Pierre-Esprit! Est-ce que ça va? # Marie-Marie
 J’arrive!
-\*Slam!*
+\*Splat!*
 AYE !! # Pierre-Esprit # Marie-Marie
-Ah c@/!$$3 il s'est enfui ! # Pierre-Esprit
+Ah c@/!$$3! Il s'est enfui! # Pierre-Esprit
 Ce n’est pas grave, ça arrive Pier- # Marie-Marie
- … # Pierre-Esprit
- … # Marie-Marie
- Mais relève-toi, je peux sûrement le rattraper. # Pierre-Esprit
- \*Rougit* … # Marie-Marie
- Oui oui je me relève tout de suite!
+ ... # Pierre-Esprit
+ ... # Marie-Marie
+ Mais relève-toi! je peux sûrement le rattraper. # Pierre-Esprit
+ \*Rougit* ... # Marie-Marie
+ Oui oui, je me relève tout de suite!
  {CCP("P", 1)}
  {CCS("P",2)}
- Ah! il est trop loin maintenant…Pas de chance a la chasse aujourd’hui…  # Pierre-Esprit
- Mais… qu’est-ce que l’on va faire alors? # Marie-Marie
+ Ah! Il est trop loin maintenant... Pas de chance à la chasse aujourd’hui...  # Pierre-Esprit
+ Mais... Qu’est-ce que l’on va faire, alors? # Marie-Marie
  {CCS("P",4)}
- Retournons chez moi, j’ai une idée… mais garde ce qu’on a fait aujourd’hui un secret… quelle honte… # Pierre-Esprit
+ Retournons chez moi, j’ai une idée... Mais garde ce qu’on a fait aujourd’hui un secret. Quelle honte... # Pierre-Esprit
 {ChangeBackground("maison_vetement")}
  {CCP("P",1)}
  {CCS("P",2)}
- Voilà ce que je voulais te montrer. MAIS SOUVIENS-TOI ! C’est un secret.
- Wooooow ! Pierre-Esprit C’est toi qui as fait tout ça? # Marie-Marie
+ Voilà ce que je voulais te montrer. Mais souviens-toi! C’est un secret.
+ Wooooow! Pierre-Esprit, c’est toi qui as fait tout ça? # Marie-Marie
  {CCS("P",4)}
- Hélas oui… J’adore ça, faire des vêtements chic et des chapeaux en peau de castor. # Pierre-Esprit
+ Hélas, oui... J’adore ça, faire des vêtements chics et des chapeaux en peau de castor. # Pierre-Esprit
  {CCS("P",2)}
- En fait, je n’aime pas trop la chasse, j’apprécie l'ambiance de la nature, mais c’est long et on revient toujours sale. Je préfère créer mes propres vêtements pour m’exprimer et dans ces vêtements de chasseur je me sens obligé d’agir comme tel…
-*[Je ne m’attendais pas a se que tu te confies à moi…]
-...Mais ce n’est pas une façon d’agir ainsi voyons! # Marie-Marie
+ En fait, je n’aime pas trop la chasse. J’apprécie l'ambiance de la nature, mais c’est long et on revient toujours sale. Je préfère créer mes propres vêtements pour m’exprime et, dans ces vêtements de chasseur, je me sens obligé d’agir ainsi...
+*[Mais ce n’est pas une raison d’agir ainsi voyons!]
 {CCS("P",4)}
-… # Pierre-Esprit
+... # Pierre-Esprit
 {GivePoints("P",0)}->choice_Pierre_Esprit_activity_two
-*[Wow Pierre-Esprit, je suis impressionnée!]
- Je ne m’attendais pas à ce que tu te confies comme ça… Et que tu sois un si bon artisan. Ton secret est en sécurité avec moi. # Marie-Marie
+*[Wow, Pierre-Esprit, je suis impressionnée!]
+ Je ne m’attendais pas à ce que tu te confies à moi comme ça... Et que tu sois un si bon artisan. Ton secret est en sécurité avec moi. # Marie-Marie
  {CCS("P",2)}
-\*Rougit* # Pierre-Esprit
+... # Pierre-Esprit
 {GivePoints("P",1)}->choice_Pierre_Esprit_activity_two
 =choice_Pierre_Esprit_activity_two
-Il commence à faire tard, je dois rentrer. Merci pour la journée ! # Marie-Marie
+Il commence à se faire tard, je dois rentrer. Merci pour la journée! # Marie-Marie
 ->Choix
 
 === apres_activites ===
@@ -426,7 +425,7 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
         ->joseph_route
     - else:
         {CCS("J",5)}
-        Oh! ahahah… ok alors… # Joseph
+        Oh! Hahahah... ok alors... # Joseph
         -> bad_end
     }
 *   [François]
@@ -437,7 +436,7 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
         ->francois_route
     - else:
         {CCS("F",3)}
-        Je… Je vois. Très bien. C’est votre décision après tout. # François
+        Je... Je vois. Très bien. C’est votre décision après tout. # François
         -> bad_end
     }
 *   [Pierre-Esprit]
@@ -448,13 +447,13 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
         ->pierre_esprit_route
     - else:
         {CCS("P",4)}
-        Ah! Bien sûr que j’allais être choisi ! *marmonne* J’aurais pu avoir mieux… # Pierre-Esprit
+        Ah! Bien sûr que j’allais être choisi ! *marmonne* J’aurais pu avoir mieux... # Pierre-Esprit
         -> bad_end
     }
 
 === bad_end ===
 {ChangeBackground("black")}
-Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi… vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
+Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi... vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
 
 Vous avez trouvé la fin malheureuse. # null
 Avez-vous trouvé les quatre fins possibles?
@@ -637,7 +636,7 @@ Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus r
 {ChangeBackground("maison_vetement")}
 La La La~ # Marie-Marie
 Voilà, cet arrangement est parfait! Ça fait vraiment ressortir les couleurs des vêtements.
-Slam! # null
+\*Slam!* # null
 {CCP("P",1)}
 Marie-Marie, je suis rentré. # Pierre-Esprit
 Pierre-Esprit, te voilà enfin! Tu arrives tard. Tu n'étais pas en train de boire tout de même? # Marie-Marie
@@ -672,7 +671,7 @@ Merci, mon chou! Tu ne le regretteras pas! # Marie-Marie
 Voilà, cela fera 10 sols! # Marie-Marie
 Tiens, Marie-Marie. # Pistolois
 Haaa, on a déjà vendu presque la moitié des vêtements. Il faudrait que Pierre-Esprit en couse d'autres. # Marie-Marie
-Slam! # null
+\*Slam!* # null
 {CCP("P",1)}
 Marie-Marie, je suis rentré. # Pierre-Esprit
 Oh, Pierre-Esprit, combien de fois je t'ai dit d'arrêter de claquer la porte en rentrant? # Marie-Marie
@@ -682,7 +681,7 @@ Tu sais, tes vêtements ont beaucoup de succès! # Marie-Marie
 Ils ne peuvent pas être si populaires... Ils n'ont rien de spécial... # Pierre-Esprit
 J'en ai déjà vendu presque la moitié! # Marie-Marie
 {CCS("P",2)}
-La-la moitié?!? <i> Mes vêtements ont vraiment du potentiel...?</i> # Pierre Esprit
+La-la moitié?!? <i> (Mes vêtements ont vraiment du potentiel...?)</i> # Pierre Esprit
 Alors? Tu veux bien garder la boutique? Il faudrait que tu fasses de nouveaux habits. # Marie-Marie
 Tu crois vraiment que je peux? Devenir couturier? # Pierre-Esprit
 Mais bien sûr! Regarde comment les étagères se sont vidées dans les derniers jours! # Marie-Marie
@@ -690,9 +689,8 @@ Je... Je vais essayer, alors. # Pierre-Esprit
 ! #Marie-Marie
 {CCS("P",1)}
 Merci, Marie-Marie. De croire en moi. # Pierre-Esprit
-{ChangeBackground("black")}
-<i>L'année suivante...</i> # null
 {ChangeBackground("maison_vetement")}
+<i>L'année suivante...</i> # null
 {CCP("P",1)}
 {CCS("P",1)}
 {CCP("F",2)}
@@ -725,15 +723,15 @@ Et je suis fière d'être ta femme. # Marie-Marie
 
 === fin_felicitation_J ===
 {ChangeBackground("black")}
-Félicitations !!! # null
-Vous avez trouvé la fin de Joseph.
+Félicitations! # null
+Vous avez trouvé la fin de Joseph. 
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
 
 === fin_felicitation_F ===
 {ChangeBackground("black")}
-Félicitations !!! # null
+Félicitations! # null
 Vous avez trouvé la fin de François. 
 Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
@@ -741,9 +739,8 @@ Avez-vous trouvé les quatre fins possibles?
 
 === fin_felicitation_P ===
 {ChangeBackground("black")}
-Félicitations !!! # null
-Vous avez trouvé la fin de Pierre-Esprit. 
-Avez-vous trouvé les quatre fins possibles?
+Félicitations! # null
+Vous avez trouvé la fin de Pierre-Esprit. Avez-vous trouvé les quatre fins possibles?
 {MainMenu()}
 ->END
 
