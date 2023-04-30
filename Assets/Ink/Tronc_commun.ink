@@ -208,7 +208,7 @@ Choisis bien. # Pierre-Esprit
 ->Choix
 
 === activite_joseph ===
-{ChangeBackground("outside")}
+{ChangeBackground("foret")}
 {CCP("J",1)}
 Bonsoir Joseph, comment s'est passée ta journée ? # Marie-Marie
 Bonsoir Marie-Marie, elle a été difficile comme d'habitude, mais j'ai réussi à couper suffisamment de bois pour le prochain hiver. # Joseph
@@ -459,12 +459,98 @@ Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est p
 ->END
 
 === joseph_route ===
-{ChangeBackground("outside")}
+{ChangeBackground("black")}
+<i>Quelques mois plus tard...</i> # null
+{ChangeBackground("foret")}
+{CCP("J",1)}
+Chérie... L'hiver approche. Je vais devoir partir au camp pour l'hiver. # Joseph
+Joseph, non! Que vais-je faire ici toute seule tout l'hiver? Amène-moi avec toi! # Marie-Marie
+{CCS("J",4)}
+Enfin, ma douce, tu sais bien que c'est un travail d'homme de bûcher! # Joseph
+Mais vous devez bien manger, n'est-ce pas? Je cuisinerai! # Marie-Marie
+{CCS("J",2)}
+Marie-Marie... Je ne pensais pas que tu t'ennuierais autant de moi. # Joseph
+{CCS("J",1)}
+Ça me ferait plaisir que tu m'accompagnes dans ce cas.
+Oh, merci, Joseph! # Marie-Marie
+{ChangeBackground("cuisine")}
+<i> Au camp de bûcherons, pendant l'hiver... </i> # null
+{CCP("J",1)}
+{CCS("J",5)}
+Tout le monde, je vous présente Marie-Marie qui cuisinera pour nous cet hiver... C'est ma femme. # Joseph
+Wow, le petit Joseph s'est trouvé une femme! J'en tombe de ma chaise! # Bûcheron
+S'il-vous-plait, vous me gênez... # Joseph
+J'aurais jamais cru voir ça arriver! Si il a réussit, je peux pas croire que je m'en trouverai pas une aussi! # Bûcheron
+{CCS("J",2)}
+Joseph est un homme impressionnant et sensible! # Marie-Marie
+C'est moi qui ait choisi de l'épouser, et je n'ai jamais regretté mon choix!
+Peut-être que si vous étiez un peu plus agréables, vous seriez déjà mariés!
+{CCS("J",5)}
+Marie-Marie, tu n'as pas à en faire tout un plat... # Joseph
+Je ne les laisserai pas se moquer de toi ainsi! # Marie-Marie
+C'est décidé, si j'entend quiconque se moquer de mon mari, il n'aura rien à manger ce jour-là!
+... # Bûcherons
+Elle a des crocs, cette femme... # Bûcheron
+Marie-Marie, revient! # Joseph
+{ChangeBackground("bedroom")}
+\*Sanglote* # Marie-Marie
+J'aurais dû rester à Trois-Pistoles...
+{CCP("J",1)}
+{CCS("J",4)}
+Marie-Marie... # Joseph
+Ne t'en fais pas... Il sont toujours comme ça, il ne sont pas méchants.
+Mais pourquoi tu te laisses faire? # Marie-Marie
+{CCS("J",0)}
+Ce qu'ils disent ne me blesse pas. # Joseph
+Pourquoi?? # Marie-Marie
+Ils peuvent penser ce qu'ils veulent, mais ça n'a pas d'importance. # Joseph
+{CCS("J",3)}
+Au final, ce qui compte, c'est d'avoir bûché.
+Mais ils disent des choses si méchantes envers toi! # Marie-Marie
+{CCS("J",0)}
+Ça ne me dérange pas. Ces hommes, ce ne sont pas mes amis. Je ne les vois que quelques mois pendant l'hiver, et on fait notre travail, rien de plus.
+{CCS("J",1)}
+Et comment je peux me laisser affecter par ce qu'ils disent quand je sais que tu es à mes côtés et que tu m'aimes?
+Joseph! Mon amour! # Marie-Marie
+{CCS("J",3)}
+L'hiver sera long, ma douce, mais ensemble, je suis sûr qu'on s'en sortira. # Joseph
+{ChangeBackground("cuisine")}
+<i> À l'arrivée du printemps... </i> # null
+Théodore! Ce n'est pas parce que c'est la dernière journée que tu passes au campement que tu peux te permettre de laisser traîner ta vaisselle! Ramasse-la tout de suite! # Marie-Marie
+O-oui, Marie-Marie, pardon... # Théodore
+Et Elzéar! Plie ta couette avant de partir! # Marie-Marie
+Tout de suite, Marie-Marie... # Elzéar
+{CCP("J",1)}
+{CCS("J",2)}
+Bon sang, Marie-Marie, tu tiens complètement leurs rênes! # Joseph
+{CCS("J",1)}
+C'est ma femme, tout le monde, n'oubliez pas!
+{CCS("J",3)}
+Mwah! Tu es parfaite.
+{CCS("J",2)}
+Ne pense pas que tu peux te sauver de tes tâches juste parce que tu es mon mari! Range tes affaires! # Marie-Marie
+Évidemment, j'étais justement sur le point de le faire... # Joseph
+Bien sûr, mon doux. # Marie-Marie
+{CCS("J",0)}
+Comment as-tu trouvé ton hiver au camp? Ça n'a pas été de tout repos, mais je trouve que tu t'en es bien sortie! # Joseph
+Tu as bien raison. Et tu sais quoi? # Marie-Marie
+Je pense que je reviendrai l'an prochain.
+{CCS("J",1)}
+Rien ne me rendrait plus heureux! # Joseph
+{CCS("J",0)}
+Mais tu sais... Je pense que cette année, je terminerai de défricher notre terre. Je pourrais trouver de quoi acheter du bétail...
+{CCS("J",3)}
+Nous n'aurons peut-être pas à revenir.
+Joseph, c'est incroyable! Tu pourras enfin enterrer ta hache! # Marie-Marie
+{CCS("J",0)}
+J'y compte. Toi, moi, notre ferme à nous deux... Ce serait la belle vie, n'est-ce pas? # Joseph
+{CCS("J",1)}
+Ce sera la fin de Joseph le bûcheron, et le début de Joseph le fermier.
 ->END
 
 === francois_route ===
 {ChangeBackground("black")}
-<i>Quelques mois plus tard...</i>
+<i>Quelques mois plus tard...</i> # null
 {ChangeBackground("bureau")}
 {CCP("F",1)}
 Oh, tu as fait une erreur ici, c'est 6, pas 4. # Marie-Marie
@@ -535,7 +621,7 @@ Si jamais je tombe malade, tu pourrais me remplacer sans problème.
 Ne fais pas de telles blagues! # Marie-Marie
 Pardon, pardon, je ne le referai plus. Je ne vis plus dans l'ombre de mon mari maintenant. Je vis pour toi. # Françoise
 Oh, ma douce! # Marie-Marie
-Suis-moi, ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus rien à te cacher désormais. # Françoise
+Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus rien à te cacher désormais. # Françoise
 
 ->END
 
