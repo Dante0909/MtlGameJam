@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4578357659418367064}
   - component: {fileID: 4868079427739671563}
   m_Layer: 0
-  m_Name: foret
+  m_Name: cabin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
