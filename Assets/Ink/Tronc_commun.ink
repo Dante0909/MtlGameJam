@@ -184,7 +184,7 @@ Choisis bien. # Pierre-Esprit
  -> Choix
  
 === Choix ===
-{ChangeBackground("bedroom")}
+{ChangeBackground("port")}
 {Choix == 1:
     Ma première journée complète à Trois-Pistoles… Je vais bientôt devoir choisir un mari, je dois donc apprendre à connaître les candidats. Aujourd’hui, je vais passer du temps avec… # Marie-Marie
 }
