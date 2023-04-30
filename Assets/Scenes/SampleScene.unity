@@ -338,7 +338,7 @@ MonoBehaviour:
   m_textBox: {fileID: 1110879011}
   m_characterTextBox: {fileID: 1549515674}
   button: {fileID: 2122502060077994197, guid: 5e5888f64d850034a81feb7f3adf6562, type: 3}
-  m_timeDelay: 0.04
+  m_timeDelay: 0.03
   darkImage: {fileID: 0}
   characterPrefabs:
   - {fileID: -6486393556269726343, guid: 6925a4c18dc94364eb7c399423cf6b02, type: 3}
