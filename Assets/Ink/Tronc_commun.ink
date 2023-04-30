@@ -3,6 +3,7 @@ EXTERNAL ChangeScene(sceneName)
 EXTERNAL CCS(characterName, spriteIndex)
 EXTERNAL CCP(characterName, pos)
 EXTERNAL Francois()
+EXTERNAL MainMenu()
 VAR J_points = 0
 VAR F_points = 0
 VAR P_points = 0
@@ -455,6 +456,11 @@ B-Bonjour. Mon futur époux sera... # Marie-Marie
 {ChangeBackground("black")}
 {F_points}
 Vous avez choisi un mari qui est incompatible avec vous. Votre mariage n’est pas réussi… vous vivez malheureux ensemble et n’avez pas beaucoup d'enfants. # null
+
+Vous avez trouvé la fin malheureuse. # null
+Avez-vous trouvé les quatre fins possibles?
+{MainMenu()}
+
 ->END
 
 === joseph_route ===
@@ -545,6 +551,7 @@ Joseph, c'est incroyable! Tu pourras enfin enterrer ta hache! # Marie-Marie
 J'y compte. Toi, moi, notre ferme à nous deux... Ce serait la belle vie, n'est-ce pas? # Joseph
 {CCS("J",1)}
 Ce sera la fin de Joseph le bûcheron, et le début de Joseph le fermier.
+->fin_felicitation_J
 ->END
 
 === francois_route ===
@@ -621,12 +628,42 @@ Ne fais pas de telles blagues! # Marie-Marie
 Pardon, pardon, je ne le referai plus. Je ne vis plus dans l'ombre de mon mari maintenant. Je vis pour toi. # Françoise
 Oh, ma douce! # Marie-Marie
 Suis-moi. Ce soir, nous déplaçons tes affaires dans ma chambre. Je n'ai plus rien à te cacher désormais. # Françoise
+->fin_felicitation_F
 
 ->END
 
 === pierre_esprit_route ===
+
+->fin_felicitation_P
 ->END
 
+=== fin_felicitation_J ===
+{ChangeBackground("black")}
+Félicitation !!! # null
+Vous avez trouvé la fin de Joseph. 
+Avez-vous trouvé les quatre fins possibles?
+{MainMenu()}
+->END
+
+=== fin_felicitation_F ===
+{ChangeBackground("black")}
+Félicitation !!! # null
+Vous avez trouvé la fin de François. 
+Avez-vous trouvé les quatre fins possibles?
+{MainMenu()}
+->END
+
+=== fin_felicitation_P ===
+{ChangeBackground("black")}
+Félicitation !!! # null
+Vous avez trouvé la fin de Pierre-Esprit. 
+Avez-vous trouvé les quatre fins possibles?
+{MainMenu()}
+->END
+
+
+=== function MainMenu()===
+    ~ return
 === function GivePoints(character, points) ===
     {character == "J":
     ~ J_points += points
