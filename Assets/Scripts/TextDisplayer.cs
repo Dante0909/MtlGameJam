@@ -173,6 +173,13 @@ public class TextDisplayer : MonoBehaviour
                         m_characterTextBox.transform.parent.gameObject.SetActive(false);
                         break;
                     }
+                    else if(t == "cg")
+                    {
+                        m_characterTextBox.transform.parent.gameObject.SetActive(false);
+                        m_textBox.transform.parent.gameObject.SetActive(false);
+                        GameObject.Find("ReturnMenuButton")?.SetActive(false);
+                        break;
+                    }
                     else if (IsACharacterFromTag(t))
                     {
                         m_currentChar = GetCharacterFromTag(t);
