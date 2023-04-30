@@ -3,6 +3,7 @@ EXTERNAL ChangeBackground(backgroundName)
 EXTERNAL ChangeScene(sceneName)
 EXTERNAL CCS(characterName, spriteIndex)
 EXTERNAL CCP(characterName, pos)
+EXTERNAL Francois()
 VAR J_points = 0
 VAR F_points = 0
 VAR P_points = 0
@@ -271,7 +272,7 @@ Oh! C’est vrai, je n’ai pas vu le temps passer #Joseph
 François? *Toque toque*
 {CCP("F",1)}
 Oh, Marie-Marie! Pardon de t’avoir fait attendre, j’étais absorbé par mon travail. Entre, je vais te servir du thé pour te réchauffer. # François
-Merci, c’est très apprécié! Je viens tout juste d’arriver, ne t’inquiète pas.# Marie-Marie
+Merci, c’est très apprécié! Je viens tout juste d’arriver, ne t’inquiète pas. # Marie-Marie
 {ChangeBackground("bureau")}
 {CCP("F",1)}
 Je suis soulagé de l’entendre. Je suis désolé de ne pas pouvoir te proposer une activité plus intéressante, mais je ne peux pas me permettre de quitter mon bureau. # François
@@ -484,10 +485,51 @@ Et bien en fait, ce n'est pas tout à fait la vérité. # François
 J'ai bien hérité la compagnie après le décès de son dirigeant précédent. Cependant, ce n'était pas mon frère.
 {CCS("F",3)}
 C'était mon époux.
-Q-Quoi? Tu es...
+Q-Quoi? Tu es... homosexuel?? # Marie-Marie
+{CCS("F",2)}
+C'est plus compliqué que cela. Je t'aime tout autant que j'ai aimé cet homme. # François
+{CCS("F",3)}
+Cependant... Ce n'est pas toute l'histoire.
+Il y a plus!? #Marie-Marie
+Oui... Car la situation qui m'a amené à marier cet homme est bien similaire à celle qui t'a amené à m'épouser. # François
+{CCS("F",2)}
+J'ai été, moi aussi, une Fille du Roy, auparavant.
+Je... suis une femme.
+Quoi?? Mais... Comment? Pourquoi?? Je suis si confuse! # Marie-Marie
+{CCS("F",0)}
+Je comprends, c'est beaucoup à avaler. # François
+J'ai immigré il y a 8 ans, en tant que Fille du Roy, tout comme toi. J'ai marié un riche marchand à qui je faisais de l'oeil.
+{CCS("F",1)}
+Il m'a appris son métier, et je l'aidais dans ses tâches quotidiennes. J'étais tout aussi responsable de la compagnie que lui. Jusqu'à...
+{CCS("F",3)}
+...ce qu'il tombe malade.
+Ce fût si rapide. En seulement quelques semaines, je suis passée d'épouse d'un marchand fructueux à veuve.
+{CCS("F",0)}
+Je refusais de perdre la compagnie et le mode de vie qui vient avec... mais une femme n'a pas le droit à l'héritage, et nous n'avions pas de descendant.
+J'ai donc prétendu être le frère cadet de mon époux afin d'en hériter. C'est l'identité que j'ai adopté ce jour là, et que j'utilise depuis.
+... # Marie-Marie
+{CCS("F",3)}
+Je suis désolée... Je comprendrais si tu ne m'aimes plus, et je prendrai tout de même soin de toi. # François
+... # Marie-Marie
+...Quel est ton vrai nom?
+...Françoise. Je ne voulais pas trop... me distancer. # Françoise
+...Françoise... # Marie-Marie
+... Je suis sous le choc, et j'ai tant de questions.
+Cependant, une chose reste claire pour moi.
+{CCS("F",2)}
+Je t'aime, Françoise.
+Marie-Marie... # Françoise
+{CCS("F",4)}
+Merci, sincèrement. J'admire ta résilience.
+Allez, il nous reste beaucoup de travail à faire.
+{ChangeBackground("bureau")}
+{CCP("F",1)}
+{CCS("F",4)}
 ->END
+
 === pierre_esprit_route ===
 ->END
+
 === function GivePoints(character, points) ===
     {character == "J":
     ~ J_points += points
@@ -509,4 +551,7 @@ Q-Quoi? Tu es...
     ~ return
     
  === function CCP(characterName, pos) ===
+    ~ return
+    
+=== function Francois() ===
     ~ return
