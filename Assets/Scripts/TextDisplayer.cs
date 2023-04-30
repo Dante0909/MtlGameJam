@@ -62,14 +62,12 @@ public class TextDisplayer : MonoBehaviour
         m_currentChoices = new List<Choice>();
         m_currentTags = new List<string>();
 
-        Action<string, int> GivePointsFunc = GivePoints;
         Action<string> ChangeSceneFunc = ChangeScene;
         Action<string> ChangeBackgroundFunc = ChangeBackground;
         Action<string, int> ChangeCharacterPositionFunc = ChangeCharacterPosition;
         Action<string, int> ChangeCharacterSpriteFunc = ChangerCharacterSprite;
         Action FrancoisFunc = FrancoisNameChange;
         
-        m_story.BindExternalFunction("GivePoints", GivePointsFunc);
         m_story.BindExternalFunction("ChangeScene", ChangeSceneFunc);
         m_story.BindExternalFunction("ChangeBackground", ChangeBackgroundFunc);
         m_story.BindExternalFunction("CCP", ChangeCharacterPositionFunc);
@@ -218,7 +216,7 @@ public class TextDisplayer : MonoBehaviour
 
             // Gets the text from the button prefab
             Text choiceText = choiceButton.GetComponentInChildren<Text>();
-            choiceText.text = " " + (choice.index + 1) + ". " + choice.text;
+            choiceText.text = choice.text;
 
             // Set listener
             choiceButton.onClick.AddListener(delegate {
@@ -263,13 +261,13 @@ public class TextDisplayer : MonoBehaviour
             SpriteRenderer spriteRenderer = currentBackground.GetComponentInChildren<SpriteRenderer>();
             Color c = spriteRenderer.color;
             float a = c.a;
-            while (spriteRenderer.color.a > 0.01f)
+            while (spriteRenderer && spriteRenderer.color.a > 0.01f)
             {
                 yield return new WaitForFixedUpdate();
                 a -= 0.02f;
                 spriteRenderer.color = new Vector4(c.r, c.g, c.b, a);
             }
-            while (spriteRenderer.color.a < 0.99f)
+            while (spriteRenderer && spriteRenderer.color.a < 0.99f)
             {
                 yield return new WaitForFixedUpdate();
                 a += 0.02f;
