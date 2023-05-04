@@ -389,7 +389,7 @@ Ce n’est pas grave, ça arrive Pier- # Marie-Marie
  {CCS("P",4)}
  Hélas, oui... J’adore ça, faire des vêtements chics et des chapeaux en peau de castor. # Pierre-Esprit
  {CCS("P",2)}
- En fait, je n’aime pas trop la chasse. J’apprécie l'ambiance de la nature, mais c’est long et on revient toujours sale. Je préfère créer mes propres vêtements pour m’exprime et, dans ces vêtements de chasseur, je me sens obligé d’agir ainsi...
+ En fait, je n’aime pas trop la chasse. J’apprécie l'ambiance de la nature, mais c’est long et on revient toujours sale. Je préfère créer mes propres vêtements pour m’exprimer et, dans ces vêtements de chasseur, je me sens obligé d’agir ainsi...
 *[Mais ce n’est pas une raison d’agir ainsi voyons!]
 {CCS("P",4)}
 ... # Pierre-Esprit
@@ -408,7 +408,7 @@ Il commence à se faire tard, je dois rentrer. Merci pour la journée! # Marie-M
 J'ai pu passer du temps avec les trois hommes... Mais je ne suis toujours pas  certaine qui choisir comme époux. Je me demande avec qui je vais passer du temps aujourd'hui. # Marie-Marie
 Marie-Marie! Je vous cherchais justement. # Jean-Baptiste Colbert
 Sir Colbert! N'êtes-vous pas reparti en France? # Marie-Marie
-Non, je repars plus tard aujourd'hui. C'est pourquoi je voulais avoir votre réponse officiel quant au choix de votre époux. # Jean-Baptiste Colbert
+Non, je repars plus tard aujourd'hui. C'est pourquoi je voulais avoir votre réponse officielle quant au choix de votre époux. # Jean-Baptiste Colbert
 J-je dois choisir maintenant? Mais enfin, j'ai à peine eu le temps de les connaître! # Marie-Marie
 Soyez heureuse d'avoir la liberté de choisir. Je réunirai le village dans une heure, assurez-vous d'avoir pris votre décision d'ici là. # Jean-Baptiste Colbert
 Je n'y crois pas... Je dois choisir d'ici UNE HEURE!? # Marie-Marie
@@ -510,7 +510,7 @@ Ils peuvent penser ce qu'ils veulent, mais ça n'a pas d'importance. # Joseph
 Au final, ce qui compte, c'est d'avoir bûché.
 Mais ils disent des choses si méchantes envers toi! # Marie-Marie
 {CCS("J",0)}
-Ça ne me dérange pas. Ces hommes, ce ne sont pas mes amis. Je ne les vois que quelques mois pendant l'hiver, et on fait notre travail, rien de plus.
+Ça ne me dérange pas. Ces hommes, ce ne sont pas mes amis. Je ne les vois que quelques mois pendant l'hiver, et on fait notre travail, rien de plus. # Joseph
 {CCS("J",1)}
 Et comment je peux me laisser affecter par ce qu'ils disent quand je sais que tu es à mes côtés et que tu m'aimes?
 Joseph! Mon amour! # Marie-Marie
